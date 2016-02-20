@@ -1,0 +1,8 @@
+Found 1 device(s):
+  0:  Realtek, RTL2838UHIDIR, SN: 00000001
+
+Using device 0: Generic RTL2832U OEM
+Found Rafael Micro R820T tuner
+[R82XX] PLL not locked!
+Tuned to 100000000 Hz.
+Signal caught, exiting!
