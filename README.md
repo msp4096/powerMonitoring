@@ -77,3 +77,6 @@ Give it 15 minutes, and check to see if another entry was saved to the log file.
 ## Useful links
 http://sdr.osmocom.org/trac/wiki/rtl-sdr#Buildingthesoftware  
 http://bemasher.github.io/rtlamr/
+### Other Helpful tips
+#### Change the timezone
+```sudo dpkg-reconfigure tzdata```
