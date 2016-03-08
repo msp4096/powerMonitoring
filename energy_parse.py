@@ -17,7 +17,7 @@ filetimestamp = time.strftime("%Y-%m")
 filename = path +  'logs/energy_' + filetimestamp + '.log'
 
 datafile = open(filename, "a", 1)
-timestamp = time.strftime("%Y-%m-%d_%H:%M:%S")
+timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
 
 tfile = open(path+'reading')
 text = tfile.read()
@@ -26,7 +26,7 @@ tfile.close()
 data = json.loads(text)
 
 kWh = float(data['Message']['Consumption']) / 100
-timestamp, _ = string.split(string.replace(data['Time'],'T','_'),'.')
+timestamp, _ = string.split(string.replace(data['Time'],'T',' '),'.')
 stamp = str(timestamp) + ',' + str('%.2f' % kWh) + '\n'
 
 datafile.write(stamp)
