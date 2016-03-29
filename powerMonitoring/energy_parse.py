@@ -7,9 +7,9 @@ import time
 import string
 
 ####### User Variables
-path = '/home/pi/powerMonitoring/'
-logfilepath = '/home/pi/powerMonitoring/logs/'		# log file directory
-textfilepath = '/home/pi/powerMonitoring/sample'	# text file to read from
+path = '/home/pi/projects/powerMonitoring/'
+logfilepath = '/home/pi/project/spowerMonitoring/logs/'		# log file directory
+textfilepath = '/home/pi/projects/powerMonitoring/sample'	# text file to read from
 
 ####### End User Variables
 
