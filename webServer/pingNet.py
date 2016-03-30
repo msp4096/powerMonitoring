@@ -1,8 +1,4 @@
 import sys
-from termcolor import colored, cprint
-
-#print colored('hello', 'red'), colored('world', 'green')
-
 import os
 
 router = '192.168.0.1'
@@ -23,21 +19,37 @@ HPprint_response= os.system("ping -c 1 " + HPprint)
 
 #and then check the response...
 if router_response == 0:
-  print colored('Router is up', 'green')
+  print 'Router is up'
+  router_response = 'Up'
 else:
-  print colored('router is down','red')
+  print 'Router is down'
+  router_response = 'Down'
 
 if lcom_response == 0:
-  print colored('DoomAlpha is up', 'green')
+  print 'DoomAlpha is up'
+  lcom_response = 'Up'
 else:
-  print colored('DoomAlpha is down', 'red')
+  print 'DoomAlpha is down'
+  lcom_response = 'Down'
 
 if ubnt_response == 0:
-  print colored('Nana UBNT','green')
+  print 'Nana UBNT is up'
+  ubnt_response = 'Up'
 else:
-  print colored('Nana UBNT','red')
+  print 'Nana UBNT is down'
+  ubnt_response = 'Down'
 
 if seccam_response == 0:
-  print colored('Cameras are up','green')
+  print 'Cameras are up'
+  seccam_response = "Up"
 else:
-  print colored('Cameras are down','red')
+  print 'Cameras are down'
+  seccam_response = "Down"
+
+if HPprint_response == 0:
+    print 'Printer is up'
+    HPprint_response = "Up"
+else:
+    print 'Printer is down'
+    HPprint_response = "Down"
+#return {router_response, lcom_response, ubnt_response, seccam_response, HPprint_response}

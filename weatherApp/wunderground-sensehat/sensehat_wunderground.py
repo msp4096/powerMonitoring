@@ -49,7 +49,7 @@ def get_solar():
 	return json.loads(json_solar)
 
 def get_kWh():
-    path = '/home/pi/powerMonitoring/'
+    path = '/home/pi/projects/powerMonitoring/'
     tfile = open(path+'reading')
     text = tfile.read()
     tfile.close()
