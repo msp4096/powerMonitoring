@@ -15,7 +15,7 @@ def pingNet():
 
     for key in devices:
 
-        if os.system("ping -c 1 " + devices[key]['IP']) == 0:
+        if os.system("ping -c 1 -W 1 " + devices[key]['IP']) == 0:
             devices[key]['Status'] = 'up'
         else:
             devices[key]['Status'] = 'down'

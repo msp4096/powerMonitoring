@@ -4,8 +4,8 @@ import time
 
 var=123456
 http_response_begin = """\
-HTTP/1.1 200 OK
-"""
+    HTTP/1.1 200 OK
+    """
 http_response_end = """Hello, World!"""
 HOST, PORT = '', 80
 
@@ -19,11 +19,11 @@ while True:
     request = client_connection.recv(1024)
     print request
 
-#     http_response = """\
-# HTTP/1.1 200 OK
-#
-# Hello, World!
-# """
+    # http_response = """\
+    # HTTP/1.1 200 OK
+    #
+    # Hello, World!
+    # """
 
 
     http_response = http_response_begin + str(var) + http_response_end

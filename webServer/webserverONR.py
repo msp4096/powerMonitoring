@@ -1,48 +1,19 @@
+#!/usr/local/bin/python
+
 from wsgiref.simple_server import make_server
 import time
 import json
 import urllib2
 import sys
 from sense_hat import SenseHat
-import pingNet
+import pingNetONR
 import os
-
-#Get solar power data from the SolarEdge API
-def get_solar():
-	api_solar_url = "https://monitoringapi.solaredge.com/sites/196000/overview.json?api_key=JRPXUFIKH0KMXBAO7NXQWYF7A6IYRT8G"
-	try:
-	  	f = urllib2.urlopen(api_solar_url)
-	except:
-		print "Failed to get solar"
-		return False
-	json_solar = f.read()
-	f.close()
-	return json.loads(json_solar)
-
-#Get current meter reading from the log file
-def get_kWh():
-    path = '/home/pi/projects/powerMonitoring/'
-    tfile = open(path+'reading')
-    text = tfile.read()
-    tfile.close()
-    data = json.loads(text)
-    kWh = float(data['Message']['Consumption']) / 100
-    return kWh
 
 #start the server and get values when page is refreshed
 def application(environ, start_response):
 
-    #solar stuff
-    solar = get_solar()
-    currentPower = solar['sitesOverviews']['siteEnergyList'][0]['siteOverview']['currentPower']['power']
-    print currentPower
-
-    #meter stuff
-    kWh = get_kWh()
-    print kWh
-
     #network stuff
-    Intra_pings = pingNet.pingNet()
+    Intra_pings = pingNetONR.pingNetONR()
     print Intra_pings
 
     #sense hat stuff
@@ -61,15 +32,14 @@ def application(environ, start_response):
     print humidity
     print pressure_in
 
-    html1 = '<html><header><h1>Pi Monitoring System</h1><h2>Power & Environment</h2><title>Pi in the Basement</title></header><body>'
-    html2 = '<table border="1"><tr><td><strong>Current Solar Output (W)</strong></td><td>'
-    html3 = '</td></tr><tr><td><strong>Meter Reading (kWh)</strong></td><td>'
-    html4 = '</td></tr><tr><td><strong>Basement Temp (F)</strong></td><td>'
-    html5 = '</td></tr><tr><td><strong>Basement Humidity (%)</strong></td><td>'
-    html6 = '</td></tr><tr><td><strong>Basement Pressure (in)</strong></td><td>'
+    html1 = '<html><header><h1>ONR Raspberry Pi Monitoring System</h1><h2>Environmental Sensors</h2><title>North Transmitter</title></header><body>'
+    html2 = '<table border="1">'
+    html4 = '<tr><td><strong>Transmitter Temp (F)</strong></td><td>'
+    html5 = '</td></tr><tr><td><strong>Transmitter Humidity (%)</strong></td><td>'
+    html6 = '</td></tr><tr><td><strong>Transmitter Pressure (in)</strong></td><td>'
     html7 = '</td></tr></table>'
 
-    table1 = html1 + html2 + str(currentPower) + html3 + str(kWh) + html4 + str(temp_f) + html5 + str(humidity) + html6 + str(pressure_in)+ html7
+    table1 = html1 + html2 + html4 + str(temp_f) + html5 + str(humidity) + html6 + str(pressure_in)+ html7
 
     htmlclose = '</body></html>'
     html8 = '<h2>Network</h2>'
