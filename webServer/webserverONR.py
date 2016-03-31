@@ -9,6 +9,10 @@ from sense_hat import SenseHat
 import pingNetONR
 import os
 
+#set IP addresses of the other Raspberry Pi devices here:
+pi_ip1	     =	'http://192.168.0.120:6600'
+
+
 #start the server and get values when page is refreshed
 def application(environ, start_response):
 
@@ -27,19 +31,22 @@ def application(environ, start_response):
     humidity = float("{0:.2f}".format(humidity))
     pressure_in = 0.0295301*(pressure_mb)
     pressure_in = float("{0:.2f}".format(pressure_in))
+    remotePiTemp = urllib2.urlopen(pi_ip1).read()
 
-    print temp_f
-    print humidity
-    print pressure_in
+    print ('Local Temp (F): '+ str(temp_f))
+    print ('Humidity (%): ' +str(humidity))
+    print ('Pressure (In.): '+str(pressure_in))
+    print ('Remote Temp (F): ' + str(remotePiTemp))
 
     html1 = '<html><header><h1>ONR Raspberry Pi Monitoring System</h1><h2>Environmental Sensors</h2><title>North Transmitter</title></header><body>'
     html2 = '<table border="1">'
-    html4 = '<tr><td><strong>Transmitter Temp (F)</strong></td><td>'
-    html5 = '</td></tr><tr><td><strong>Transmitter Humidity (%)</strong></td><td>'
+    html4 = '<tr><td><strong>Local Temperature (F)</strong></td><td>'
+    html5 = '</td></tr><tr><td><strong>Remote Temperature (F)</strong></td><td>'
+    html5a = '</td></tr><tr><td><strong>Transmitter Humidity (%)</strong></td><td>'
     html6 = '</td></tr><tr><td><strong>Transmitter Pressure (in)</strong></td><td>'
     html7 = '</td></tr></table>'
 
-    table1 = html1 + html2 + html4 + str(temp_f) + html5 + str(humidity) + html6 + str(pressure_in)+ html7
+    table1 = html1 + html2 + html4 + str(temp_f) + html5 + str(remotePiTemp)+ html5a + str(humidity) + html6 + str(pressure_in)+ html7
 
     htmlclose = '</body></html>'
     html8 = '<h2>Network</h2>'

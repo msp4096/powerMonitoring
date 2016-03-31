@@ -1,8 +1,9 @@
 #!/usr/bin/python
 from BaseHTTPServer import BaseHTTPRequestHandler,HTTPServer
 from sense_hat import SenseHat
+import json
 
-PORT_NUMBER = 80
+PORT_NUMBER = 6600
 
 
 
@@ -17,19 +18,23 @@ class myHandler(BaseHTTPRequestHandler):
 		self.end_headers()
 		# Send the html message
 
-        sense=SenseHat()
-        temp_c = sense.get_temperature()
-        humidity = sense.get_humidity()
-        pressure_mb = sense.get_pressure()
-        temp_f = temp_c * 9.0 / 5.0 + 32.0
-        temp_f = float("{0:.2f}".format(temp_f))
-        humidity = float("{0:.2f}".format(humidity))
-        pressure_in = 0.0295301*(pressure_mb)
-        pressure_in = float("{0:.2f}".format(pressure_in))
-        print temp_f
+		sense=SenseHat()
+	        temp_c = sense.get_temperature()
+		#humidity = sense.get_humidity()
+	        #pressure_mb = sense.get_pressure()
+		temp_f = temp_c * 9.0 / 5.0 + 32.0
+	        temp_f = float("{0:.2f}".format(temp_f))
+		#humidity = float("{0:.2f}".format(humidity))
+	        #pressure_in = 0.0295301*(pressure_mb)
+		#pressure_in = float("{0:.2f}".format(pressure_in))
+		print temp_f
 
-		self.wfile.write({'temp':temp_f,'pressure':pressure_in,'Humidity':humidity})
-		return
+	        #data = {}
+		#data['key'] = 'value'
+	        #json_data = json.dumps(data)
+
+		self.wfile.write(temp_f)
+	        return
 
 try:
 	#Create a web server and define the handler to manage the
