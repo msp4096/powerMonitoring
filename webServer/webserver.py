@@ -6,7 +6,7 @@ import sys
 from sense_hat import SenseHat
 import pingNet
 import os
-import picamera
+#import picamera
 
 #Get solar power data from the SolarEdge API
 def get_solar():
@@ -87,8 +87,9 @@ def application(environ, start_response):
 
     html14 = '</td></tr></table>'
     #htmltime = '<h2>Time:</h2>'
-    html15 = '<h2>Current picture</h2><img src="image.jpg" alt="Pi Camera Picture">'
-#    html15 = '<h2>Current picture</h2><img src="image.jpg" alt="Pi Camera Picture" style="width:304px;height:228px;">'
+    html15 = '<h2>Current picture</h2><img src="http://nobacks.com/wp-content/uploads/2014/11/Raspberry-9.png" alt="Pi Camera Picture">'
+#    html15 = '<h2>Current picture</h2><img src="image.jpg" alt="Pi Camera Picture">'
+#    html15 = '<h2>Current picture</h2><img src="/home/pi/projects/webServer/image.jpg" alt="Pi Camera Picture" style="width:304px;height:228px;">'
     htmlclose = '</body></html>'
 
     table2 = html8 + html9 + table_rows + html14
