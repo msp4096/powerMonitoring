@@ -3,24 +3,22 @@ from BaseHTTPServer import BaseHTTPRequestHandler,HTTPServer
 #from sense_hat import SenseHat
 #import json
 
-PORT_NUMBER = 80
+PORT_NUMBER = 6600
 
 #This class will handles any incoming request from
 #the browser
 class myHandler(BaseHTTPRequestHandler):
 
 	#Handler for the GET requests
-        def do_HEAD(self):
-            self.send_response(200)
-            self.send_header("Content-type", "text/html")
-            self.end_headers()
-    	    def do_GET(self):
-		self.send_response(200)
-		self.send_header('Content-type','image/jpeg')
-		self.end_headers()
-		# Send the html message	
-		self.wfile.write('/home/pi/projects/webServer/image.jpg')
-	    return
+   def do_GET(self):
+	self.send_response(200)
+	self.send_header('Content-type','image/jpg')
+	self.end_headers()
+	f = open('image.jpg','rb')	
+# Send the html message	
+	self.wfile.write(f.read())
+	f.close()
+	return
 
 try:
 	#Create a web server and define the handler to manage the
