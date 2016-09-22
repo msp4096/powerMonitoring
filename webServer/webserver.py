@@ -57,6 +57,7 @@ def application(environ, start_response):
     print kWh
     print netuse
     print pwr
+    pwr = float(pwr) + float(currentPower)
 
     #network stuff
     Intra_pings = pingNet.pingNet()
@@ -79,10 +80,10 @@ def application(environ, start_response):
     print pressure_in
 
     html1 = '<html><header><h1>Pi Monitoring System</h1><h2>Power & Environment</h2><title>Pi in the Basement</title></header><body>'
-    html2 = '<table border="1"><tr><td><strong>Current Solar Output (W)</strong></td><td>'
-    html3 = '</td></tr><tr><td><strong>Meter Reading (kWh)</strong></td><td>'
-    htmlx = '</td></tr><tr><td><strong>Net this month (kWh)</strong></td><td>'
-    htmly = '</td></tr><tr><td><strong>Current power (W)</strong></td><td>' 
+    html2 = '<table border="1"><tr><td><strong>Current Solar Power (W)</strong></td><td>'
+    html3 = '</td></tr><tr><td><strong>Current Meter Reading (kWh)</strong></td><td>'
+    htmlx = '</td></tr><tr><td><strong>Metered Net This Month (kWh)</strong></td><td>'
+    htmly = '</td></tr><tr><td><strong>Current Power Consumption (W)</strong></td><td>' 
     html4 = '</td></tr><tr><td><strong>Basement Temp (F)</strong></td><td>'
     html5 = '</td></tr><tr><td><strong>Basement Humidity (%)</strong></td><td>'
     html6 = '</td></tr><tr><td><strong>Basement Pressure (in)</strong></td><td>'
