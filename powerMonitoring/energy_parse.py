@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # Script to read energy meter last reading
-# 2014-03-21
+# 2016-09-27
 
 import json
 import time

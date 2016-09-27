@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 from wsgiref.simple_server import make_server
 import time
 import json
@@ -8,7 +10,11 @@ import pingNet
 import os
 #import picamera
 
+# ------ User settings -------
 portNumber = 80
+WUNDERGROUND_API_KEY = "c2ac867add89df72"
+STATE = "MA"
+CITY = "Topsfield"
 
 #Get solar power data from the SolarEdge API
 def get_solar():
@@ -22,6 +28,18 @@ def get_solar():
 	f.close()
 	return json.loads(json_solar)
 
+#Get the current weather conditions
+def get_conditions():
+        api_conditions_url = "http://api.wunderground.com/api/" + WUNDERGROUND_API_KEY + "/conditions/q/" + STATE + "/" + CITY + ".json"
+        try:
+                f = urllib2.urlopen(api_conditions_url)
+        except:
+                print "Failed to get conditions"
+                return False
+        json_conditions = f.read()
+        f.close()
+        return json.loads(json_conditions)
+	
 #Get current information from the log file
 def get_kWh():
     
@@ -71,32 +89,40 @@ def application(environ, start_response):
     pressure_mb = sense.get_pressure()
     temp_f = temp_c * 9.0 / 5.0 + 32.0
     temp_f = float("{0:.2f}".format(temp_f))
-    humidity = float("{0:.2f}".format(humidity))
+    humidity = float("{0:.2f}".format(humidity)) + 20
     pressure_in = 0.0295301*(pressure_mb)
     pressure_in = float("{0:.2f}".format(pressure_in))
-
+    
+    outside_conditions = get_conditions()
+    outside_temp_f = outside_conditions['current_observation']['temp_f']
+    outside_humidity_pct = outside_conditions['current_observation']['relative_humidity']
+    print outside_temp_f
+    print outside_humidity_pct
     print temp_f
     print humidity
     print pressure_in
 
-    html1 = '<html><header><h1>Pi Monitoring System</h1><h2>Power & Environment</h2><title>Pi in the Basement</title></header><body>'
+    html1 = '<html><header><h1>Pi Monitoring System</h1><h2>Power Monitoring</h2><title>Pi in the Basement</title></header><body>'
     html2 = '<table border="1"><tr><td><strong>Current Solar Power (W)</strong></td><td>'
     html3 = '</td></tr><tr><td><strong>Current Meter Reading (kWh)</strong></td><td>'
     htmlx = '</td></tr><tr><td><strong>Metered Net This Month (kWh)</strong></td><td>'
     htmly = '</td></tr><tr><td><strong>Current Power Consumption (W)</strong></td><td>' 
-    html4 = '</td></tr><tr><td><strong>Basement Temp (F)</strong></td><td>'
+    #html4 = '</td></tr></table><h2>Environment</h2><table border="1"><tr><td></td></tr><tr><td><strong>Basement Temp (F)</strong></td><td>'
+    html4 = '</td></tr></table><h2>Environment</h2><table border="1"><tr><td><strong>Basement Temp (F)</strong></td><td>'
     html5 = '</td></tr><tr><td><strong>Basement Humidity (%)</strong></td><td>'
     html6 = '</td></tr><tr><td><strong>Basement Pressure (in)</strong></td><td>'
+    htmla = '</td></tr><tr><td><strong>Outside Temp (F)</strong></td><td>'
+    htmlb = '</td></tr><tr><td><strong>Outside Humidity (%)</strong></td><td>'
     html7 = '</td></tr></table>'
 
-    table1 = html1 + html2 + str(currentPower) + html3 + str(kWh) + htmlx + str(netuse) + htmly + str(pwr) + html4 + str(temp_f) + html5 + str(humidity) + html6 + str(pressure_in)+ html7
+    table1 = html1 + html2 + str(currentPower) + htmlx + str(netuse) + htmly + str(pwr) + html3 + str(kWh) + html4 + str(temp_f) + html5 + str(humidity) + html6 + str(pressure_in)+ htmla + str(outside_temp_f) + htmlb + str(outside_humidity_pct) + html7
 
     htmlclose = '</body></html>'
     html8 = '<h2>Network</h2>'
     html9 = '<table border="1">'
     table_rows = ''
-#    for (host, status) in Intra_pings.items():
-#        table_rows += "<tr><td><strong>{}</strong></td><td>{}</td></tr>".format(host, status)
+#   for (host, status) in Intra_pings.items():
+#   table_rows += "<tr><td><strong>{}</strong></td><td>{}</td></tr>".format(host, status)
 
     for key in Intra_pings:
         if Intra_pings[key]['Status'] == 'up':
@@ -106,12 +132,12 @@ def application(environ, start_response):
 
     html14 = '</td></tr></table>'
     #htmltime = '<h2>Time:</h2>'
-#    html15 = '<h2>Current picture</h2><img src="http://127.0.0.1:6600" alt="Pi Camera Picture">'
-#    html15 = '<h2>Current picture</h2><img src="image.jpg" alt="Pi Camera Picture">'
-#    html15 = '<h2>Current picture</h2><img src="/home/pi/projects/webServer/image.jpg" alt="Pi Camera Picture" style="width:304px;height:228px;">'
+#   html15 = '<h2>Current picture</h2><img src="http://127.0.0.1:6600" alt="Pi Camera Picture">'
+#   html15 = '<h2>Current picture</h2><img src="image.jpg" alt="Pi Camera Picture">'
+#   html15 = '<h2>Current picture</h2><img src="/home/pi/projects/webServer/image.jpg" alt="Pi Camera Picture" style="width:304px;height:228px;">'
     htmlclose = '</body></html>'
 
-    table2 = html8 + html9 + table_rows + html14
+    table2 = html8 + html9 + table_rows + html14 + time.strftime('%H:%m:%S')
 
     # response_body
     #response_body = table1 + table2 + html15 + htmlclose
