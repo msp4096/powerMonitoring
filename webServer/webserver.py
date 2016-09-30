@@ -8,6 +8,7 @@ import sys
 from sense_hat import SenseHat
 import pingNet
 import os
+import os.path
 #import picamera
 
 # ------ User settings -------
@@ -15,6 +16,12 @@ portNumber = 80
 WUNDERGROUND_API_KEY = "c2ac867add89df72"
 STATE = "MA"
 CITY = "Topsfield"
+
+#Get time
+def get_current_time():
+	current_time = time.strftime('%H:%M:%S')
+	return current_time
+	
 
 #Get solar power data from the SolarEdge API
 def get_solar():
@@ -45,19 +52,25 @@ def get_kWh():
     
 	path = '/home/pi/projects/powerMonitoring/logs/'
 	fileTS = time.strftime("%Y-%m")
-	tfile = open(path+'energy_'+fileTS+'.log')
-	lines = tfile.readlines()
-	if lines:
-		first_line = str(lines[0].rstrip())
-		last_line = str(lines[-1].rstrip())
-	tfile.close()
-	first_line = first_line.split(',')
-	last_line  = last_line.split(',')
-	print first_line
-	print last_line
-	kWh = last_line[1]
-	netuse = last_line[3]
-	pwr = last_line[2]
+	tfile = path + 'energy_' + fileTS + '.log'
+	if os.path.isfile(tfile):
+		tfile = open(path+'energy_'+fileTS+'.log')
+		lines = tfile.readlines()
+		if lines:
+			first_line = str(lines[0].rstrip())
+			last_line = str(lines[-1].rstrip())
+		tfile.close()
+		first_line = first_line.split(',')
+		last_line  = last_line.split(',')
+		print first_line
+		print last_line
+		kWh = last_line[1]
+		netuse = last_line[3]
+		pwr = last_line[2]
+	else:
+		kWh = 0
+		netuse = 0
+		pwr = 0
 	return (kWh, netuse, pwr)
 
 #start the server and get values when page is refreshed
@@ -69,7 +82,10 @@ def application(environ, start_response):
     solar = get_solar()
     currentPower = solar['sitesOverviews']['siteEnergyList'][0]['siteOverview']['currentPower']['power']
     print currentPower
-
+    
+    #get time
+    current_time = get_current_time()
+    
     #meter stuff
     kWh, netuse, pwr = get_kWh()
     print kWh
@@ -137,7 +153,7 @@ def application(environ, start_response):
 #   html15 = '<h2>Current picture</h2><img src="/home/pi/projects/webServer/image.jpg" alt="Pi Camera Picture" style="width:304px;height:228px;">'
     htmlclose = '</body></html>'
 
-    table2 = html8 + html9 + table_rows + html14 + time.strftime('%H:%m:%S')
+    table2 = html8 + html9 + table_rows + html14 + str(current_time)
 
     # response_body
     #response_body = table1 + table2 + html15 + htmlclose
