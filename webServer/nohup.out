@@ -9792,3 +9792,1149 @@ PING 192.168.0.77 (192.168.0.77) 56(84) bytes of data.
 1 packets transmitted, 1 received, 0% packet loss, time 0ms
 rtt min/avg/max/mdev = 2.597/2.597/2.597/0.000 ms
 139.162.13.205 - - [30/Sep/2016 12:36:56] "GET / HTTP/1.1" 200 1283
+PING 192.168.0.105 (192.168.0.105) 56(84) bytes of data.
+64 bytes from 192.168.0.105: icmp_seq=1 ttl=64 time=0.909 ms
+
+--- 192.168.0.105 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.909/0.909/0.909/0.000 ms
+PING 192.168.0.1 (192.168.0.1) 56(84) bytes of data.
+64 bytes from 192.168.0.1: icmp_seq=1 ttl=64 time=0.467 ms
+
+--- 192.168.0.1 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.467/0.467/0.467/0.000 ms
+PING 192.168.0.88 (192.168.0.88) 56(84) bytes of data.
+64 bytes from 192.168.0.88: icmp_seq=1 ttl=64 time=2.76 ms
+
+--- 192.168.0.88 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 2.763/2.763/2.763/0.000 ms
+PING 192.168.0.112 (192.168.0.112) 56(84) bytes of data.
+
+--- 192.168.0.112 ping statistics ---
+1 packets transmitted, 0 received, 100% packet loss, time 0ms
+
+PING 192.168.0.77 (192.168.0.77) 56(84) bytes of data.
+64 bytes from 192.168.0.77: icmp_seq=1 ttl=64 time=101 ms
+
+--- 192.168.0.77 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 101.936/101.936/101.936/0.000 ms
+8.0.112'}, "Nana's UBNT": {'IP': '192.168.0.77'}}
+new dict
+{'DoomAlpha': {'Status': 'up', 'IP': '192.168.0.105'}, 'Router': {'Status': 'up', 'IP': '192.168.0.1'}, 'Cameras': {'Status': 'up', 'IP': '192.168.0.88'}, 'HPprinter': {'Status': 'down', 'IP': '192.168.0.112'}, "Nana's UBNT": {'Status': 'up', 'IP': '192.168.0.77'}}
+59.5
+76%
+88.16
+55.44
+30.6
+/
+2088.0
+['2016-09-01 03:05:23', '98537.31']
+['2016-09-30 11:30:05', '98518.17', '-1484.54', '-19.14']
+98518.17
+-19.14
+-1484.54
+original dict
+{'DoomAlpha': {'IP': '192.168.0.105'}, 'Router': {'IP': '192.168.0.1'}, 'Cameras': {'IP': '192.168.0.88'}, 'HPprinter': {'IP': '192.168.0.112'}, "Nana's UBNT": {'IP': '192.168.0.77'}}
+new dict
+{'DoomAlpha': {'Status': 'up', 'IP': '192.168.0.105'}, 'Router': {'Status': 'up', 'IP': '192.168.0.1'}, 'Cameras': {'Status': 'up', 'IP': '192.168.0.88'}, 'HPprinter': {'Status': 'down', 'IP': '192.168.0.112'}, "Nana's UBNT": {'Status': 'up', 'IP': '192.168.0.77'}}
+59.7
+76%
+88.19
+55.76
+30.6
+/favicon.ico
+2088.0
+['2016-09-01 03:05:23', '98537.31']
+['2016-09-30 11:30:05', '98518.17', '-1484.54', '-19.14']
+98518.17
+-19.14
+-1484.54
+original dict
+{'DoomAlpha': {'IP': '192.168.0.105'}, 'Router': {'IP': '192.168.0.1'}, 'Cameras': {'IP': '192.168.0.88'}, 'HPprinter': {'IP': '192.168.0.112'}, "Nana's UBNT": {'IP': '192.168.0.77'}}
+new dict
+{'DoomAlpha': {'Status': 'up', 'IP': '192.168.0.105'}, 'Router': {'Status': 'up', 'IP': '192.168.0.1'}, 'Cameras': {'Status': 'up', 'IP': '192.168.0.88'}, 'HPprinter': {'Status': 'down', 'IP': '192.168.0.112'}, "Nana's UBNT": {'Status': 'up', 'IP': '192.168.0.77'}}
+59.5
+76%
+88.36
+55.55
+30.6
+/
+1007.0
+['2016-09-01 03:05:23', '98537.31']
+['2016-09-30 11:35:13', '98518.11', '-701.30', '-19.2']
+98518.11
+-19.2
+-701.30
+original dict
+{'DoomAlpha': {'IP': '192.168.0.105'}, 'Router': {'IP': '192.168.0.1'}, 'Cameras': {'IP': '192.168.0.88'}, 'HPprinter': {'IP': '192.168.0.112'}, "Nana's UBNT": {'IP': '192.168.0.77'}}
+new dict
+{'DoomAlpha': {'Status': 'up', 'IP': '192.168.0.105'}, 'Router': {'Status': 'up', 'IP': '192.168.0.1'}, 'Cameras': {'Status': 'up', 'IP': '192.168.0.88'}, 'HPprinter': {'Status': 'down', 'IP': '192.168.0.112'}, "Nana's UBNT": {'Status': 'up', 'IP': '192.168.0.77'}}
+59.7
+76%
+88.56
+55.79
+30.6
+/favicon.ico
+1007.0
+['2016-09-01 03:05:23', '98537.31']
+['2016-09-30 11:35:13', '98518.11', '-701.30', '-19.2']
+98518.11
+-19.2
+-701.30
+original dict
+{'DoomAlpha': {'IP': '192.168.0.105'}, 'Router': {'IP': '192.168.0.1'}, 'Cameras': {'IP': '192.168.0.88'}, 'HPprinter': {'IP': '192.168.0.112'}, "Nana's UBNT": {'IP': '192.168.0.77'}}
+new dict
+{'DoomAlpha': {'Status': 'up', 'IP': '192.168.0.105'}, 'Router': {'Status': 'up', 'IP': '192.168.0.1'}, 'Cameras': {'Status': 'up', 'IP': '192.168.0.88'}, 'HPprinter': {'Status': 'down', 'IP': '192.168.0.112'}, "Nana's UBNT": {'Status': 'up', 'IP': '192.168.0.77'}}
+59.7
+76%
+88.46
+55.13
+30.6
+/
+1736.0
+['2016-09-01 03:05:23', '98537.31']
+['2016-09-30 12:35:05', '98517.70', '-2226.80', '-19.61']
+98517.70
+-19.61
+-2226.80
+original dict
+{'DoomAlpha': {'IP': '192.168.0.105'}, 'Router': {'IP': '192.168.0.1'}, 'Cameras': {'IP': '192.168.0.88'}, 'HPprinter': {'IP': '192.168.0.112'}, "Nana's UBNT": {'IP': '192.168.0.77'}}
+new dict
+{'DoomAlpha': {'Status': 'up', 'IP': '192.168.0.105'}, 'Router': {'Status': 'up', 'IP': '192.168.0.1'}, 'Cameras': {'Status': 'up', 'IP': '192.168.0.88'}, 'HPprinter': {'Status': 'down', 'IP': '192.168.0.112'}, "Nana's UBNT": {'Status': 'up', 'IP': '192.168.0.77'}}
+58.6
+78%
+88.99
+56.88
+30.61
+/
+1900.5
+['2016-09-01 03:05:23', '98537.31']
+['2016-09-30 12:55:12', '98517.17', '-1652.46', '-20.14']
+98517.17
+-20.14
+-1652.46
+original dict
+{'DoomAlpha': {'IP': '192.168.0.105'}, 'Router': {'IP': '192.168.0.1'}, 'Cameras': {'IP': '192.168.0.88'}, 'HPprinter': {'IP': '192.168.0.112'}, "Nana's UBNT": {'IP': '192.168.0.77'}}
+new dict
+{'DoomAlpha': {'Status': 'up', 'IP': '192.168.0.105'}, 'Router': {'Status': 'up', 'IP': '192.168.0.1'}, 'Cameras': {'Status': 'up', 'IP': '192.168.0.88'}, 'HPprinter': {'Status': 'down', 'IP': '192.168.0.112'}, "Nana's UBNT": {'Status': 'up', 'IP': '192.168.0.192.168.0.107 - - [30/Sep/2016 12:57:02] "GET / HTTP/1.1" 200 1282
+PING 192.168.0.105 (192.168.0.105) 56(84) bytes of data.
+64 bytes from 192.168.0.105: icmp_seq=1 ttl=64 time=0.472 ms
+
+--- 192.168.0.105 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.472/0.472/0.472/0.000 ms
+PING 192.168.0.1 (192.168.0.1) 56(84) bytes of data.
+64 bytes from 192.168.0.1: icmp_seq=1 ttl=64 time=0.459 ms
+
+--- 192.168.0.1 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.459/0.459/0.459/0.000 ms
+PING 192.168.0.88 (192.168.0.88) 56(84) bytes of data.
+64 bytes from 192.168.0.88: icmp_seq=1 ttl=64 time=0.475 ms
+
+--- 192.168.0.88 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.475/0.475/0.475/0.000 ms
+PING 192.168.0.112 (192.168.0.112) 56(84) bytes of data.
+From 192.168.0.120 icmp_seq=1 Destination Host Unreachable
+
+--- 192.168.0.112 ping statistics ---
+1 packets transmitted, 0 received, +1 errors, 100% packet loss, time 0ms
+
+PING 192.168.0.77 (192.168.0.77) 56(84) bytes of data.
+64 bytes from 192.168.0.77: icmp_seq=1 ttl=64 time=52.1 ms
+
+--- 192.168.0.77 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 52.141/52.141/52.141/0.000 ms
+192.168.0.107 - - [30/Sep/2016 12:57:04] "GET /favicon.ico HTTP/1.1" 200 1282
+PING 192.168.0.105 (192.168.0.105) 56(84) bytes of data.
+64 bytes from 192.168.0.105: icmp_seq=1 ttl=64 time=0.523 ms
+
+--- 192.168.0.105 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.523/0.523/0.523/0.000 ms
+PING 192.168.0.1 (192.168.0.1) 56(84) bytes of data.
+64 bytes from 192.168.0.1: icmp_seq=1 ttl=64 time=0.484 ms
+
+--- 192.168.0.1 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.484/0.484/0.484/0.000 ms
+PING 192.168.0.88 (192.168.0.88) 56(84) bytes of data.
+64 bytes from 192.168.0.88: icmp_seq=1 ttl=64 time=9.53 ms
+
+--- 192.168.0.88 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 9.539/9.539/9.539/0.000 ms
+PING 192.168.0.112 (192.168.0.112) 56(84) bytes of data.
+
+--- 192.168.0.112 ping statistics ---
+1 packets transmitted, 0 received, 100% packet loss, time 0ms
+
+PING 192.168.0.77 (192.168.0.77) 56(84) bytes of data.
+64 bytes from 192.168.0.77: icmp_seq=1 ttl=64 time=85.0 ms
+
+--- 192.168.0.77 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 85.094/85.094/85.094/0.000 ms
+201.172.191.62 - - [30/Sep/2016 13:04:14] "GET /cgi/common.cgi HTTP/1.0" 200 1284
+PING 192.168.0.105 (192.168.0.105) 56(84) bytes of data.
+64 bytes from 192.168.0.105: icmp_seq=1 ttl=64 time=0.452 ms
+
+--- 192.168.0.105 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.452/0.452/0.452/0.000 ms
+PING 192.168.0.1 (192.168.0.1) 56(84) bytes of data.
+64 bytes from 192.168.0.1: icmp_seq=1 ttl=64 time=0.445 ms
+
+--- 192.168.0.1 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.445/0.445/0.445/0.000 ms
+PING 192.168.0.88 (192.168.0.88) 56(84) bytes of data.
+64 bytes from 192.168.0.88: icmp_seq=1 ttl=64 time=0.791 ms
+
+--- 192.168.0.88 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.791/0.791/0.791/0.000 ms
+PING 192.168.0.112 (192.168.0.112) 56(84) bytes of data.
+From 192.168.0.120 icmp_seq=1 Destination Host Unreachable
+
+--- 192.168.0.112 ping statistics ---
+1 packets transmitted, 0 received, +1 errors, 100% packet loss, time 0ms
+
+PING 192.168.0.77 (192.168.0.77) 56(84) bytes of data.
+64 bytes from 192.168.0.77: icmp_seq=1 ttl=64 time=1.66 ms
+
+--- 192.168.0.77 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 1.663/1.663/1.663/0.000 ms
+201.172.191.62 - - [30/Sep/2016 13:04:16] "GET /stssys.htm HTTP/1.0" 200 1284
+PING 192.168.0.105 (192.168.0.105) 56(84) bytes of data.
+64 bytes from 192.168.0.105: icmp_seq=1 ttl=64 time=0.470 ms
+
+--- 192.168.0.105 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.470/0.470/0.470/0.000 ms
+PING 192.168.0.1 (192.168.0.1) 56(84) bytes of data.
+64 bytes from 192.168.0.1: icmp_seq=1 ttl=64 time=0.467 ms
+
+--- 192.168.0.1 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.467/0.467/0.467/0.000 ms
+PING 192.168.0.88 (192.168.0.88) 56(84) bytes of data.
+64 bytes from 192.168.0.88: icmp_seq=1 ttl=64 time=1.07 ms
+
+--- 192.168.0.88 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 1.075/1.075/1.075/0.000 ms
+PING 192.168.0.112 (192.168.0.112) 56(84) bytes of data.
+
+--- 192.168.0.112 ping statistics ---
+1 packets transmitted, 0 received, 100% packet loss, time 0ms
+
+PING 192.168.0.77 (192.168.0.77) 56(84) bytes of data.
+64 bytes from 192.168.0.77: icmp_seq=1 ttl=64 time=1.42 ms
+
+--- 192.168.0.77 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 1.424/1.424/1.424/0.000 ms
+201.172.191.62 - - [30/Sep/2016 13:04:19] "GET / HTTP/1.0" 200 1284
+PING 192.168.0.105 (192.168.0.105) 56(84) bytes of data.
+64 bytes from 192.168.0.105: icmp_seq=1 ttl=64 time=0.413 ms
+
+--- 192.168.0.105 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.413/0.413/0.413/0.000 ms
+PING 192.168.0.1 (192.168.0.1) 56(84) bytes of data.
+64 bytes from 192.168.0.1: icmp_seq=1 ttl=64 time=0.420 ms
+
+--- 192.168.0.1 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.420/0.420/0.420/0.000 ms
+PING 192.168.0.88 (192.168.0.88) 56(84) bytes of data.
+64 bytes from 192.168.0.88: icmp_seq=1 ttl=64 time=0.493 ms
+
+--- 192.168.0.88 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.493/0.493/0.493/0.000 ms
+PING 192.168.0.112 (192.168.0.112) 56(84) bytes of data.
+From 192.168.0.120 icmp_seq=1 Destination Host Unreachable
+
+--- 192.168.0.112 ping statistics ---
+1 packets transmitted, 0 received, +1 errors, 100% packet loss, time 0ms
+
+PING 192.168.0.77 (192.168.0.77) 56(84) bytes of data.
+64 bytes from 192.168.0.77: icmp_seq=1 ttl=64 time=1.08 ms
+
+--- 192.168.0.77 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 1.083/1.083/1.083/0.000 ms
+201.172.191.62 - - [30/Sep/2016 13:04:21] "POST /command.php HTTP/1.0" 200 1284
+PING 192.168.0.105 (192.168.0.105) 56(84) bytes of data.
+64 bytes from 192.168.0.105: icmp_seq=1 ttl=64 time=1.35 ms
+
+--- 192.168.0.105 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 1.353/1.353/1.353/0.000 ms
+PING 192.168.0.1 (192.168.0.1) 56(84) bytes of data.
+64 bytes from 192.168.0.1: icmp_seq=1 ttl=64 time=0.489 ms
+
+--- 192.168.0.1 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.489/0.489/0.489/0.000 ms
+PING 192.168.0.88 (192.168.0.88) 56(84) bytes of data.
+64 bytes from 192.168.0.88: icmp_seq=1 ttl=64 time=5.23 ms
+
+--- 192.168.0.88 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 5.232/5.232/5.232/0.000 ms
+PING 192.168.0.112 (192.168.0.112) 56(84) bytes of data.
+
+--- 192.168.0.112 ping statistics ---
+1 packets transmitted, 0 received, 100% packet loss, time 0ms
+
+PING 192.168.0.77 (192.168.0.77) 56(84) bytes of data.
+64 bytes from 192.168.0.77: icmp_seq=1 ttl=64 time=2.93 ms
+
+--- 192.168.0.77 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 2.939/2.939/2.939/0.000 ms
+192.168.0.107 - - [30/Sep/2016 13:36:07] "GET / HTTP/1.1" 200 1283
+77'}}
+59.2
+78%
+88.36
+55.27
+30.6
+/favicon.ico
+1900.5
+['2016-09-01 03:05:23', '98537.31']
+['2016-09-30 12:55:12', '98517.17', '-1652.46', '-20.14']
+98517.17
+-20.14
+-1652.46
+original dict
+{'DoomAlpha': {'IP': '192.168.0.105'}, 'Router': {'IP': '192.168.0.1'}, 'Cameras': {'IP': '192.168.0.88'}, 'HPprinter': {'IP': '192.168.0.112'}, "Nana's UBNT": {'IP': '192.168.0.77'}}
+new dict
+{'DoomAlpha': {'Status': 'up', 'IP': '192.168.0.105'}, 'Router': {'Status': 'up', 'IP': '192.168.0.1'}, 'Cameras': {'Status': 'up', 'IP': '192.168.0.88'}, 'HPprinter': {'Status': 'down', 'IP': '192.168.0.112'}, "Nana's UBNT": {'Status': 'up', 'IP': '192.168.0.77'}}
+59.2
+78%
+88.66
+54.79
+30.6
+/cgi/common.cgi
+1172.0
+['2016-09-01 03:05:23', '98537.31']
+['2016-09-30 13:00:10', '98517.06', '-1328.86', '-20.25']
+98517.06
+-20.25
+-1328.86
+original dict
+{'DoomAlpha': {'IP': '192.168.0.105'}, 'Router': {'IP': '192.168.0.1'}, 'Cameras': {'IP': '192.168.0.88'}, 'HPprinter': {'IP': '192.168.0.112'}, "Nana's UBNT": {'IP': '192.168.0.77'}}
+new dict
+{'DoomAlpha': {'Status': 'up', 'IP': '192.168.0.105'}, 'Router': {'Status': 'up', 'IP': '192.168.0.1'}, 'Cameras': {'Status': 'up', 'IP': '192.168.0.88'}, 'HPprinter': {'Status': 'down', 'IP': '192.168.0.112'}, "Nana's UBNT": {'Status': 'up', 'IP': '192.168.0.77'}}
+59.4
+77%
+88.49
+55.63
+30.59
+/stssys.htm
+1172.0
+['2016-09-01 03:05:23', '98537.31']
+['2016-09-30 13:00:10', '98517.06', '-1328.86', '-20.25']
+98517.06
+-20.25
+-1328.86
+original dict
+{'DoomAlpha': {'IP': '192.168.0.105'}, 'Router': {'IP': '192.168.0.1'}, 'Cameras': {'IP': '192.168.0.88'}, 'HPprinter': {'IP': '192.168.0.112'}, "Nana's UBNT": {'IP': '192.168.0.77'}}
+new dict
+{'DoomAlpha': {'Status': 'up', 'IP': '192.168.0.105'}, 'Router': {'Status': 'up', 'IP': '192.168.0.1'}, 'Cameras': {'Status': 'up', 'IP': '192.168.0.88'}, 'HPprinter': {'Status': 'down', 'IP': '192.168.0.112'}, "Nana's UBNT": {'Status': 'up', 'IP': '192.168.0.77'}}
+59.4
+77%
+88.26
+55.19
+30.59
+/
+1172.0
+['2016-09-01 03:05:23', '98537.31']
+['2016-09-30 13:00:10', '98517.06', '-1328.86', '-20.25']
+98517.06
+-20.25
+-1328.86
+original dict
+{'DoomAlpha': {'IP': '192.168.0.105'}, 'Router': {'IP': '192.168.0.1'}, 'Cameras': {'IP': '192.168.0.88'}, 'HPprinter': {'IP': '192.168.0.112'}, "Nana's UBNT": {'IP': '192.168.0.77'}}
+new dict
+{'DoomAlpha': {'Status': 'up', 'IP': '192.168.0.105'}, 'Router': {'Status': 'up', 'IP': '192.168.0.1'}, 'Cameras': {'Status': 'up', 'IP': '192.168.0.88'}, 'HPprinter': {'Status': 'down', 'IP': '192.168.0.112'}, "Nana's UBNT": {'Status': 'up', 'IP': '192.168.0.77'}}
+59.4
+77%
+88.39
+55.55
+30.59
+/command.php
+1172.0
+['2016-09-01 03:05:23', '98537.31']
+['2016-09-30 13:00:10', '98517.06', '-1328.86', '-20.25']
+98517.06
+-20.25
+-1328.86
+original dict
+{'DoomAlpha': {'IP': '192.168.0.105'}, 'Router': {'IP': '192.168.0.1'}, 'Cameras': {'IP': '192.168.0.88'}, 'HPprinter': {'IP': '192.168.0.112'}, "Nana's UBNT": {'IP': '192.168.0.77'}}
+new dict
+{'DoomAlpha': {'Status': 'up', 'IP': '192.168.0.105'}, 'Router': {'Status': 'up', 'IP': '192.168.0.1'}, 'Cameras': {'Status': 'up', 'IP': '192.168.0.88'}, 'HPprinter': {'Status': 'down', 'IP': '192.168.0.112'}, "Nana's UBNT": {'Status': 'up', 'IP': '192.168.0.77'}}
+59.4
+77%
+88.36
+55.99
+30.59
+/
+1366.5
+['2016-09-01 03:05:23', '98537.31']
+['2016-09-30 13:35:07', '98516.34', '-1204.01', '-20.97']
+98516.34
+-20.97
+-1204.01
+original dict
+{'DoomAlpha': {'IP': '192.168.0.105'}, 'Router': {'IP': '192.168.0.1'}, 'Cameras': {'IP': '192.168.0.88'}, 'HPprinter': {'IP': '192.168.0.112'}, "Nana's UBNT": {'IP': '192.168.0.77'}}
+new dict
+{'DoomAlpha': {'Status': 'up', 'IP': '192.168.0.105'}, 'Router': {'Status': 'up', 'IP': '192.168.0.1'}, 'Cameras': {'Status': 'up', 'IP': '192.168.0.88'}, 'HPprinter': {'Status': 'down', 'IP': '192.168.0.112'}, "Nana's UBNT": {'Status': 'up', 'IP': '192.168.0.77'}}
+59.4
+76%
+88.86
+54.65
+30.59
+/favicon.ico
+1366.5
+['2016-09-01 03:05:23', '98537.31']
+['2016-09-30 13:35:07', '98516.34', '-1204.01', '-20.97']
+98516.34
+-20.97
+-1204.01
+original dict
+{'DoomAlpha': {'IP': '192.168.0.105'}, 'Router': {'IP': '192.168.0.1'}, 'Cameras': {'IP': '192.168PING 192.168.0.105 (192.168.0.105) 56(84) bytes of data.
+64 bytes from 192.168.0.105: icmp_seq=1 ttl=64 time=0.480 ms
+
+--- 192.168.0.105 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.480/0.480/0.480/0.000 ms
+PING 192.168.0.1 (192.168.0.1) 56(84) bytes of data.
+64 bytes from 192.168.0.1: icmp_seq=1 ttl=64 time=0.441 ms
+
+--- 192.168.0.1 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.441/0.441/0.441/0.000 ms
+PING 192.168.0.88 (192.168.0.88) 56(84) bytes of data.
+64 bytes from 192.168.0.88: icmp_seq=1 ttl=64 time=0.542 ms
+
+--- 192.168.0.88 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.542/0.542/0.542/0.000 ms
+PING 192.168.0.112 (192.168.0.112) 56(84) bytes of data.
+From 192.168.0.120 icmp_seq=1 Destination Host Unreachable
+
+--- 192.168.0.112 ping statistics ---
+1 packets transmitted, 0 received, +1 errors, 100% packet loss, time 0ms
+
+PING 192.168.0.77 (192.168.0.77) 56(84) bytes of data.
+64 bytes from 192.168.0.77: icmp_seq=1 ttl=64 time=1.32 ms
+
+--- 192.168.0.77 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 1.322/1.322/1.322/0.000 ms
+192.168.0.107 - - [30/Sep/2016 13:36:09] "GET /favicon.ico HTTP/1.1" 200 1283
+PING 192.168.0.105 (192.168.0.105) 56(84) bytes of data.
+64 bytes from 192.168.0.105: icmp_seq=1 ttl=64 time=0.955 ms
+
+--- 192.168.0.105 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.955/0.955/0.955/0.000 ms
+PING 192.168.0.1 (192.168.0.1) 56(84) bytes of data.
+64 bytes from 192.168.0.1: icmp_seq=1 ttl=64 time=0.488 ms
+
+--- 192.168.0.1 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.488/0.488/0.488/0.000 ms
+PING 192.168.0.88 (192.168.0.88) 56(84) bytes of data.
+64 bytes from 192.168.0.88: icmp_seq=1 ttl=64 time=5.25 ms
+
+--- 192.168.0.88 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 5.259/5.259/5.259/0.000 ms
+PING 192.168.0.112 (192.168.0.112) 56(84) bytes of data.
+
+--- 192.168.0.112 ping statistics ---
+1 packets transmitted, 0 received, 100% packet loss, time 0ms
+
+PING 192.168.0.77 (192.168.0.77) 56(84) bytes of data.
+64 bytes from 192.168.0.77: icmp_seq=1 ttl=64 time=2.84 ms
+
+--- 192.168.0.77 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 2.843/2.843/2.843/0.000 ms
+192.168.0.107 - - [30/Sep/2016 13:45:57] "GET / HTTP/1.1" 200 1281
+PING 192.168.0.105 (192.168.0.105) 56(84) bytes of data.
+64 bytes from 192.168.0.105: icmp_seq=1 ttl=64 time=0.523 ms
+
+--- 192.168.0.105 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.523/0.523/0.523/0.000 ms
+PING 192.168.0.1 (192.168.0.1) 56(84) bytes of data.
+64 bytes from 192.168.0.1: icmp_seq=1 ttl=64 time=0.471 ms
+
+--- 192.168.0.1 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.471/0.471/0.471/0.000 ms
+PING 192.168.0.88 (192.168.0.88) 56(84) bytes of data.
+64 bytes from 192.168.0.88: icmp_seq=1 ttl=64 time=0.527 ms
+
+--- 192.168.0.88 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.527/0.527/0.527/0.000 ms
+PING 192.168.0.112 (192.168.0.112) 56(84) bytes of data.
+From 192.168.0.120 icmp_seq=1 Destination Host Unreachable
+
+--- 192.168.0.112 ping statistics ---
+1 packets transmitted, 0 received, +1 errors, 100% packet loss, time 0ms
+
+PING 192.168.0.77 (192.168.0.77) 56(84) bytes of data.
+64 bytes from 192.168.0.77: icmp_seq=1 ttl=64 time=103 ms
+
+--- 192.168.0.77 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 103.985/103.985/103.985/0.000 ms
+192.168.0.107 - - [30/Sep/2016 13:45:59] "GET /favicon.ico HTTP/1.1" 200 1282
+PING 192.168.0.105 (192.168.0.105) 56(84) bytes of data.
+64 bytes from 192.168.0.105: icmp_seq=1 ttl=64 time=1.64 ms
+
+--- 192.168.0.105 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 1.641/1.641/1.641/0.000 ms
+PING 192.168.0.1 (192.168.0.1) 56(84) bytes of data.
+64 bytes from 192.168.0.1: icmp_seq=1 ttl=64 time=0.497 ms
+
+--- 192.168.0.1 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.497/0.497/0.497/0.000 ms
+PING 192.168.0.88 (192.168.0.88) 56(84) bytes of data.
+64 bytes from 192.168.0.88: icmp_seq=1 ttl=64 time=9.00 ms
+
+--- 192.168.0.88 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 9.008/9.008/9.008/0.000 ms
+PING 192.168.0.112 (192.168.0.112) 56(84) bytes of data.
+
+--- 192.168.0.112 ping statistics ---
+1 packets transmitted, 0 received, 100% packet loss, time 0ms
+
+PING 192.168.0.77 (192.168.0.77) 56(84) bytes of data.
+64 bytes from 192.168.0.77: icmp_seq=1 ttl=64 time=3.15 ms
+
+--- 192.168.0.77 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 3.156/3.156/3.156/0.000 ms
+182.118.53.55 - - [30/Sep/2016 14:09:15] "GET / HTTP/1.1" 200 1282
+PING 192.168.0.105 (192.168.0.105) 56(84) bytes of data.
+64 bytes from 192.168.0.105: icmp_seq=1 ttl=64 time=1.71 ms
+
+--- 192.168.0.105 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 1.713/1.713/1.713/0.000 ms
+PING 192.168.0.1 (192.168.0.1) 56(84) bytes of data.
+64 bytes from 192.168.0.1: icmp_seq=1 ttl=64 time=1.44 ms
+
+--- 192.168.0.1 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 1.448/1.448/1.448/0.000 ms
+PING 192.168.0.88 (192.168.0.88) 56(84) bytes of data.
+64 bytes from 192.168.0.88: icmp_seq=1 ttl=64 time=5.59 ms
+
+--- 192.168.0.88 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 5.599/5.599/5.599/0.000 ms
+PING 192.168.0.112 (192.168.0.112) 56(84) bytes of data.
+
+--- 192.168.0.112 ping statistics ---
+1 packets transmitted, 0 received, 100% packet loss, time 0ms
+
+PING 192.168.0.77 (192.168.0.77) 56(84) bytes of data.
+64 bytes from 192.168.0.77: icmp_seq=1 ttl=64 time=3.67 ms
+
+--- 192.168.0.77 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 3.672/3.672/3.672/0.000 ms
+115.239.228.8 - - [30/Sep/2016 16:04:54] "GET http://zc.qq.com/cgi-bin/common/attr?id=260714&r=0.1324377734597272 HTTP/1.1" 200 1282
+PING 192.168.0.105 (192.168.0.105) 56(84) bytes of data.
+64 bytes from 192.168.0.105: icmp_seq=1 ttl=64 time=1.79 ms
+
+--- 192.168.0.105 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 1.794/1.794/1.794/0.000 ms
+PING 192.168.0.1 (192.168.0.1) 56(84) bytes of data.
+64 bytes from 192.168.0.1: icmp_seq=1 ttl=64 time=0.491 ms
+
+--- 192.168.0.1 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.491/0.491/0.491/0.000 ms
+PING 192.168.0.88 (192.168.0.88) 56(84) bytes of data.
+64 bytes from 192.168.0.88: icmp_seq=1 ttl=64 time=3.63 ms
+
+--- 192.168.0.88 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 3.635/3.635/3.635/0.000 ms
+PING 192.168.0.112 (192.168.0.112) 56(84) bytes of data.
+
+--- 192.168.0.112 ping statistics ---
+1 packets transmitted, 0 received, 100% packet loss, time 0ms
+
+PING 192.168.0.77 (192.168.0.77) 56(84) bytes of data.
+64 bytes from 192.168.0.77: icmp_seq=1 ttl=64 time=2.36 ms
+
+--- 192.168.0.77 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 2.366/2.366/2.366/0.000 ms
+66.30.34.188 - - [30/Sep/2016 19:15:42] "GET / HTTP/1.1" 200 1279
+PING 192.168.0.105 (192.168.0.105) 56(84) bytes of data.
+64 bytes from 192.168.0.105: icmp_seq=1 ttl=64 time=0.430 ms
+
+--- 192.168.0.105 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.430/0.430/0.430/0.000 ms
+PING 192.168.0.1 (192.168.0.1) 56(84) bytes of data.
+64 bytes from 192.168.0.1: icmp_seq=1 ttl=64 time=0.455 ms
+
+--- 192.168.0.1 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.455/0.455/0.455/0.000 ms
+PING 192.168.0.88 (192.168.0.88) 56(84) bytes of data.
+64 bytes from 192.168.0.88: icmp_seq=1 ttl=64 time=0.459 ms
+
+--- 192.168.0.88 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.459/0.459/0.459/0.000 ms
+PING 192.168.0.112 (192.168.0.112) 56(84) bytes of data.
+From 192.168.0.120 icmp_seq=1 Destination Host Unreachable
+
+--- 192.168.0.112 ping statistics ---
+1 packets transmitted, 0 received, +1 errors, 100% packet loss, time 0ms
+
+PING 192.168.0.77 (192.168.0.77) 56(84) bytes of data.
+64 bytes from 192.168.0.77: icmp_seq=1 ttl=64 time=21.3 ms
+
+--- 192.168.0.77 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 21.332/21.332/21.332/0.000 ms
+.0.88'}, 'HPprinter': {'IP': '192.168.0.112'}, "Nana's UBNT": {'IP': '192.168.0.77'}}
+new dict
+{'DoomAlpha': {'Status': 'up', 'IP': '192.168.0.105'}, 'Router': {'Status': 'up', 'IP': '192.168.0.1'}, 'Cameras': {'Status': 'up', 'IP': '192.168.0.88'}, 'HPprinter': {'Status': 'down', 'IP': '192.168.0.112'}, "Nana's UBNT": {'Status': 'up', 'IP': '192.168.0.77'}}
+59.4
+76%
+88.59
+54.97
+30.59
+/
+1444.0
+['2016-09-01 03:05:23', '98537.31']
+['2016-09-30 13:45:11', '98516.11', '-1324.41', '-21.2']
+98516.11
+-21.2
+-1324.41
+original dict
+{'DoomAlpha': {'IP': '192.168.0.105'}, 'Router': {'IP': '192.168.0.1'}, 'Cameras': {'IP': '192.168.0.88'}, 'HPprinter': {'IP': '192.168.0.112'}, "Nana's UBNT": {'IP': '192.168.0.77'}}
+new dict
+{'DoomAlpha': {'Status': 'up', 'IP': '192.168.0.105'}, 'Router': {'Status': 'up', 'IP': '192.168.0.1'}, 'Cameras': {'Status': 'up', 'IP': '192.168.0.88'}, 'HPprinter': {'Status': 'down', 'IP': '192.168.0.112'}, "Nana's UBNT": {'Status': 'up', 'IP': '192.168.0.77'}}
+59.2
+75%
+88.69
+54.4
+30.58
+/favicon.ico
+1444.0
+['2016-09-01 03:05:23', '98537.31']
+['2016-09-30 13:45:11', '98516.11', '-1324.41', '-21.2']
+98516.11
+-21.2
+-1324.41
+original dict
+{'DoomAlpha': {'IP': '192.168.0.105'}, 'Router': {'IP': '192.168.0.1'}, 'Cameras': {'IP': '192.168.0.88'}, 'HPprinter': {'IP': '192.168.0.112'}, "Nana's UBNT": {'IP': '192.168.0.77'}}
+new dict
+{'DoomAlpha': {'Status': 'up', 'IP': '192.168.0.105'}, 'Router': {'Status': 'up', 'IP': '192.168.0.1'}, 'Cameras': {'Status': 'up', 'IP': '192.168.0.88'}, 'HPprinter': {'Status': 'down', 'IP': '192.168.0.112'}, "Nana's UBNT": {'Status': 'up', 'IP': '192.168.0.77'}}
+59.2
+75%
+88.66
+55.24
+30.58
+/
+750.5
+['2016-09-01 03:05:23', '98537.31']
+['2016-09-30 14:05:04', '98516.03', '-123.71', '-21.28']
+98516.03
+-21.28
+-123.71
+original dict
+{'DoomAlpha': {'IP': '192.168.0.105'}, 'Router': {'IP': '192.168.0.1'}, 'Cameras': {'IP': '192.168.0.88'}, 'HPprinter': {'IP': '192.168.0.112'}, "Nana's UBNT": {'IP': '192.168.0.77'}}
+new dict
+{'DoomAlpha': {'Status': 'up', 'IP': '192.168.0.105'}, 'Router': {'Status': 'up', 'IP': '192.168.0.1'}, 'Cameras': {'Status': 'up', 'IP': '192.168.0.88'}, 'HPprinter': {'Status': 'down', 'IP': '192.168.0.112'}, "Nana's UBNT": {'Status': 'up', 'IP': '192.168.0.77'}}
+57.9
+76%
+88.89
+54.24
+30.58
+http://zc.qq.com/cgi-bin/common/attr
+327.0
+['2016-09-01 03:05:23', '98537.31']
+['2016-09-30 16:00:15', '98516.07', '466.02', '-21.24']
+98516.07
+-21.24
+466.02
+original dict
+{'DoomAlpha': {'IP': '192.168.0.105'}, 'Router': {'IP': '192.168.0.1'}, 'Cameras': {'IP': '192.168.0.88'}, 'HPprinter': {'IP': '192.168.0.112'}, "Nana's UBNT": {'IP': '192.168.0.77'}}
+new dict
+{'DoomAlpha': {'Status': 'up', 'IP': '192.168.0.105'}, 'Router': {'Status': 'up', 'IP': '192.168.0.1'}, 'Cameras': {'Status': 'up', 'IP': '192.168.0.88'}, 'HPprinter': {'Status': 'down', 'IP': '192.168.0.112'}, "Nana's UBNT": {'Status': 'up', 'IP': '192.168.0.77'}}
+56.5
+80%
+89.09
+54.13
+30.56
+/
+0.0
+['2016-09-01 03:05:23', '98537.31']
+['2016-09-30 19:15:17', '98517.56', '690.10', '-19.75']
+98517.56
+-19.75
+690.10
+original dict
+{'DoomAlpha': {'IP': '192.168.0.105'}, 'Router': {'IP': '192.168.0.1'}, 'Cameras': {'IP': '192.168.0.88'}, 'HPprinter': {'IP': '192.168.0.112'}, "Nana's UBNT": {'IP': '192.168.0.77'}}
+new dict
+{'DoomAlpha': {'Status': 'up', 'IP': '192.168.0.105'}, 'Router': {'Status': 'up', 'IP': '192.168.0.1'}, 'Cameras': {'Status': 'up', 'IP': '192.168.0.88'}, 'HPprinter': {'Status': 'down', 'IP': '192.168.0.112'}, "Nana's UBNT": {'Status': 'up', 'IP': '192.168.0.77'}}
+55.2
+85%
+88.69
+53.39
+30.53
+/favicon.ico
+0.0
+['2016-09-01 03:05:23', '98537.31']
+['2016-09-30 19:15:17', '98517.56', '690.10', '-19.75']
+98517.56
+-19.75
+690.10
+original dict
+{'DoomAlpha': {'IP': '192.168.0.105'}, 'Router': {'IP': '192.168.0.1'}, 'Cameras': {'IP': '192.168.0.88'}, 'HPprinter': {'IP': '192.168.0.112'}, "Nana's UBNT": {'IP': '192.168.0.77'}}
+new dict
+{'DoomAlpha': {'Status': 'up', 'IP': '192.168.0.105'}, 'Router': {'Status': 'up', 'IP': '192.168.0.1'}, 'Cameras': {'Status': 'up', 'IP': '192.168.0.88'}, 'HPprinter': {'Status': 'down', 'IP': '192.168.066.30.34.188 - - [30/Sep/2016 19:15:44] "GET /favicon.ico HTTP/1.1" 200 1279
+PING 192.168.0.105 (192.168.0.105) 56(84) bytes of data.
+64 bytes from 192.168.0.105: icmp_seq=1 ttl=64 time=1.05 ms
+
+--- 192.168.0.105 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 1.050/1.050/1.050/0.000 ms
+PING 192.168.0.1 (192.168.0.1) 56(84) bytes of data.
+64 bytes from 192.168.0.1: icmp_seq=1 ttl=64 time=0.485 ms
+
+--- 192.168.0.1 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.485/0.485/0.485/0.000 ms
+PING 192.168.0.88 (192.168.0.88) 56(84) bytes of data.
+64 bytes from 192.168.0.88: icmp_seq=1 ttl=64 time=8.29 ms
+
+--- 192.168.0.88 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 8.296/8.296/8.296/0.000 ms
+PING 192.168.0.112 (192.168.0.112) 56(84) bytes of data.
+
+--- 192.168.0.112 ping statistics ---
+1 packets transmitted, 0 received, 100% packet loss, time 0ms
+
+PING 192.168.0.77 (192.168.0.77) 56(84) bytes of data.
+64 bytes from 192.168.0.77: icmp_seq=1 ttl=64 time=2.60 ms
+
+--- 192.168.0.77 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 2.607/2.607/2.607/0.000 ms
+191.96.249.189 - - [30/Sep/2016 19:21:39] "GET /index.html HTTP/1.0" 200 1280
+PING 192.168.0.105 (192.168.0.105) 56(84) bytes of data.
+64 bytes from 192.168.0.105: icmp_seq=1 ttl=64 time=1.23 ms
+
+--- 192.168.0.105 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 1.236/1.236/1.236/0.000 ms
+PING 192.168.0.1 (192.168.0.1) 56(84) bytes of data.
+64 bytes from 192.168.0.1: icmp_seq=1 ttl=64 time=0.526 ms
+
+--- 192.168.0.1 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.526/0.526/0.526/0.000 ms
+PING 192.168.0.88 (192.168.0.88) 56(84) bytes of data.
+64 bytes from 192.168.0.88: icmp_seq=1 ttl=64 time=3.94 ms
+
+--- 192.168.0.88 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 3.945/3.945/3.945/0.000 ms
+PING 192.168.0.112 (192.168.0.112) 56(84) bytes of data.
+
+--- 192.168.0.112 ping statistics ---
+1 packets transmitted, 0 received, 100% packet loss, time 0ms
+
+PING 192.168.0.77 (192.168.0.77) 56(84) bytes of data.
+64 bytes from 192.168.0.77: icmp_seq=1 ttl=64 time=8.04 ms
+
+--- 192.168.0.77 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 8.045/8.045/8.045/0.000 ms
+159.203.168.255 - - [30/Sep/2016 19:54:23] "GET /muieblackcat HTTP/1.1" 200 1280
+PING 192.168.0.105 (192.168.0.105) 56(84) bytes of data.
+64 bytes from 192.168.0.105: icmp_seq=1 ttl=64 time=0.469 ms
+
+--- 192.168.0.105 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.469/0.469/0.469/0.000 ms
+PING 192.168.0.1 (192.168.0.1) 56(84) bytes of data.
+64 bytes from 192.168.0.1: icmp_seq=1 ttl=64 time=0.409 ms
+
+--- 192.168.0.1 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.409/0.409/0.409/0.000 ms
+PING 192.168.0.88 (192.168.0.88) 56(84) bytes of data.
+64 bytes from 192.168.0.88: icmp_seq=1 ttl=64 time=0.472 ms
+
+--- 192.168.0.88 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.472/0.472/0.472/0.000 ms
+PING 192.168.0.112 (192.168.0.112) 56(84) bytes of data.
+From 192.168.0.120 icmp_seq=1 Destination Host Unreachable
+
+--- 192.168.0.112 ping statistics ---
+1 packets transmitted, 0 received, +1 errors, 100% packet loss, time 0ms
+
+PING 192.168.0.77 (192.168.0.77) 56(84) bytes of data.
+
+--- 192.168.0.77 ping statistics ---
+1 packets transmitted, 0 received, 100% packet loss, time 0ms
+
+159.203.168.255 - - [30/Sep/2016 19:54:26] "GET //phpMyAdmin/scripts/setup.php HTTP/1.1" 200 1282
+PING 192.168.0.105 (192.168.0.105) 56(84) bytes of data.
+64 bytes from 192.168.0.105: icmp_seq=1 ttl=64 time=0.404 ms
+
+--- 192.168.0.105 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.404/0.404/0.404/0.000 ms
+PING 192.168.0.1 (192.168.0.1) 56(84) bytes of data.
+64 bytes from 192.168.0.1: icmp_seq=1 ttl=64 time=0.416 ms
+
+--- 192.168.0.1 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.416/0.416/0.416/0.000 ms
+PING 192.168.0.88 (192.168.0.88) 56(84) bytes of data.
+64 bytes from 192.168.0.88: icmp_seq=1 ttl=64 time=0.447 ms
+
+--- 192.168.0.88 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.447/0.447/0.447/0.000 ms
+PING 192.168.0.112 (192.168.0.112) 56(84) bytes of data.
+
+--- 192.168.0.112 ping statistics ---
+1 packets transmitted, 0 received, 100% packet loss, time 0ms
+
+PING 192.168.0.77 (192.168.0.77) 56(84) bytes of data.
+
+--- 192.168.0.77 ping statistics ---
+1 packets transmitted, 0 received, 100% packet loss, time 0ms
+
+159.203.168.255 - - [30/Sep/2016 19:54:29] "GET //phpmyadmin/scripts/setup.php HTTP/1.1" 200 1282
+PING 192.168.0.105 (192.168.0.105) 56(84) bytes of data.
+64 bytes from 192.168.0.105: icmp_seq=1 ttl=64 time=0.420 ms
+
+--- 192.168.0.105 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.420/0.420/0.420/0.000 ms
+PING 192.168.0.1 (192.168.0.1) 56(84) bytes of data.
+64 bytes from 192.168.0.1: icmp_seq=1 ttl=64 time=0.413 ms
+
+--- 192.168.0.1 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.413/0.413/0.413/0.000 ms
+PING 192.168.0.88 (192.168.0.88) 56(84) bytes of data.
+64 bytes from 192.168.0.88: icmp_seq=1 ttl=64 time=1.50 ms
+
+--- 192.168.0.88 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 1.501/1.501/1.501/0.000 ms
+PING 192.168.0.112 (192.168.0.112) 56(84) bytes of data.
+
+--- 192.168.0.112 ping statistics ---
+1 packets transmitted, 0 received, 100% packet loss, time 0ms
+
+PING 192.168.0.77 (192.168.0.77) 56(84) bytes of data.
+
+--- 192.168.0.77 ping statistics ---
+1 packets transmitted, 0 received, 100% packet loss, time 0ms
+
+159.203.168.255 - - [30/Sep/2016 19:54:32] "GET //pma/scripts/setup.php HTTP/1.1" 200 1282
+PING 192.168.0.105 (192.168.0.105) 56(84) bytes of data.
+64 bytes from 192.168.0.105: icmp_seq=1 ttl=64 time=0.443 ms
+
+--- 192.168.0.105 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.443/0.443/0.443/0.000 ms
+PING 192.168.0.1 (192.168.0.1) 56(84) bytes of data.
+64 bytes from 192.168.0.1: icmp_seq=1 ttl=64 time=0.464 ms
+
+--- 192.168.0.1 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.464/0.464/0.464/0.000 ms
+PING 192.168.0.88 (192.168.0.88) 56(84) bytes of data.
+64 bytes from 192.168.0.88: icmp_seq=1 ttl=64 time=0.524 ms
+
+--- 192.168.0.88 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.524/0.524/0.524/0.000 ms
+PING 192.168.0.112 (192.168.0.112) 56(84) bytes of data.
+
+--- 192.168.0.112 ping statistics ---
+1 packets transmitted, 0 received, 100% packet loss, time 0ms
+
+PING 192.168.0.77 (192.168.0.77) 56(84) bytes of data.
+
+--- 192.168.0.77 ping statistics ---
+1 packets transmitted, 0 received, 100% packet loss, time 0ms
+
+159.203.168.255 - - [30/Sep/2016 19:54:36] "GET //myadmin/scripts/setup.php HTTP/1.1" 200 1282
+.112'}, "Nana's UBNT": {'Status': 'up', 'IP': '192.168.0.77'}}
+55.2
+85%
+88.49
+54.09
+30.53
+/index.html
+0.0
+['2016-09-01 03:05:23', '98537.31']
+['2016-09-30 19:20:07', '98517.59', '372.41', '-19.72']
+98517.59
+-19.72
+372.41
+original dict
+{'DoomAlpha': {'IP': '192.168.0.105'}, 'Router': {'IP': '192.168.0.1'}, 'Cameras': {'IP': '192.168.0.88'}, 'HPprinter': {'IP': '192.168.0.112'}, "Nana's UBNT": {'IP': '192.168.0.77'}}
+new dict
+{'DoomAlpha': {'Status': 'up', 'IP': '192.168.0.105'}, 'Router': {'Status': 'up', 'IP': '192.168.0.1'}, 'Cameras': {'Status': 'up', 'IP': '192.168.0.88'}, 'HPprinter': {'Status': 'down', 'IP': '192.168.0.112'}, "Nana's UBNT": {'Status': 'up', 'IP': '192.168.0.77'}}
+55.2
+86%
+89.26
+52.59
+30.54
+/muieblackcat
+0.0
+['2016-09-01 03:05:23', '98537.31']
+['2016-09-30 19:50:05', '98517.95', '771.43', '-19.36']
+98517.95
+-19.36
+771.43
+original dict
+{'DoomAlpha': {'IP': '192.168.0.105'}, 'Router': {'IP': '192.168.0.1'}, 'Cameras': {'IP': '192.168.0.88'}, 'HPprinter': {'IP': '192.168.0.112'}, "Nana's UBNT": {'IP': '192.168.0.77'}}
+new dict
+{'DoomAlpha': {'Status': 'up', 'IP': '192.168.0.105'}, 'Router': {'Status': 'up', 'IP': '192.168.0.1'}, 'Cameras': {'Status': 'up', 'IP': '192.168.0.88'}, 'HPprinter': {'Status': 'down', 'IP': '192.168.0.112'}, "Nana's UBNT": {'Status': 'up', 'IP': '192.168.0.77'}}
+55.0
+88%
+88.79
+53.26
+30.54
+//phpMyAdmin/scripts/setup.php
+0.0
+['2016-09-01 03:05:23', '98537.31']
+['2016-09-30 19:50:05', '98517.95', '771.43', '-19.36']
+98517.95
+-19.36
+771.43
+original dict
+{'DoomAlpha': {'IP': '192.168.0.105'}, 'Router': {'IP': '192.168.0.1'}, 'Cameras': {'IP': '192.168.0.88'}, 'HPprinter': {'IP': '192.168.0.112'}, "Nana's UBNT": {'IP': '192.168.0.77'}}
+new dict
+{'DoomAlpha': {'Status': 'up', 'IP': '192.168.0.105'}, 'Router': {'Status': 'up', 'IP': '192.168.0.1'}, 'Cameras': {'Status': 'up', 'IP': '192.168.0.88'}, 'HPprinter': {'Status': 'down', 'IP': '192.168.0.112'}, "Nana's UBNT": {'Status': 'down', 'IP': '192.168.0.77'}}
+55.0
+88%
+88.49
+52.25
+30.54
+//phpmyadmin/scripts/setup.php
+0.0
+['2016-09-01 03:05:23', '98537.31']
+['2016-09-30 19:50:05', '98517.95', '771.43', '-19.36']
+98517.95
+-19.36
+771.43
+original dict
+{'DoomAlpha': {'IP': '192.168.0.105'}, 'Router': {'IP': '192.168.0.1'}, 'Cameras': {'IP': '192.168.0.88'}, 'HPprinter': {'IP': '192.168.0.112'}, "Nana's UBNT": {'IP': '192.168.0.77'}}
+new dict
+{'DoomAlpha': {'Status': 'up', 'IP': '192.168.0.105'}, 'Router': {'Status': 'up', 'IP': '192.168.0.1'}, 'Cameras': {'Status': 'up', 'IP': '192.168.0.88'}, 'HPprinter': {'Status': 'down', 'IP': '192.168.0.112'}, "Nana's UBNT": {'Status': 'down', 'IP': '192.168.0.77'}}
+55.0
+88%
+88.66
+53.03
+30.54
+//pma/scripts/setup.php
+0.0
+['2016-09-01 03:05:23', '98537.31']
+['2016-09-30 19:50:05', '98517.95', '771.43', '-19.36']
+98517.95
+-19.36
+771.43
+original dict
+{'DoomAlpha': {'IP': '192.168.0.105'}, 'Router': {'IP': '192.168.0.1'}, 'Cameras': {'IP': '192.168.0.88'}, 'HPprinter': {'IP': '192.168.0.112'}, "Nana's UBNT": {'IP': '192.168.0.77'}}
+new dict
+{'DoomAlpha': {'Status': 'up', 'IP': '192.168.0.105'}, 'Router': {'Status': 'up', 'IP': '192.168.0.1'}, 'Cameras': {'Status': 'up', 'IP': '192.168.0.88'}, 'HPprinter': {'Status': 'down', 'IP': '192.168.0.112'}, "Nana's UBNT": {'Status': 'down', 'IP': '192.168.0.77'}}
+55.0
+88%
+88.66
+53.23
+30.54
+//myadmin/scripts/setup.php
+0.0
+['2016-09-01 03:05:23', '98537.31']
+['2016-09-30 19:50:05', '98517.95', '771.43', '-19.36']
+98517.95
+-19.36
+771.43
+original dict
+{'DoomAlpha': {'IP': '192.168.0.105'}, 'Router': {'IP': '192.168.0.1'}, 'Cameras': {'IP': '192.168.0.88'}, 'HPprinter': {'IP': '192.168.0.112'}, "Nana's UBNT": {'IP': '192.168.0.77'}}
+new dict
+{'DoomAlpha': {'Status': 'up', 'IP': '192.168.0.105'}, 'Router': {'Status': 'up', 'IP': '192.168.0.1'}, 'Cameras': {'Status': 'up', 'IP': '192.168.0.88'}, 'HPprinter': {'Status': 'down', 'IP': '192.168.0.112'}, "Nana's UBNT": {'Status': 'down', 'IP': '192.168.0.77'}}
+55.0
+88%
+88.76
+53.42
+30.54
+//MyAdmin/scripts/setup.php
+0.0
+['2016-09-01 03:05:23', '98537.31']
+['2016-09-30 19:50:05', '98517.95', '771.43', '-19.36']
+98517.95
+-19.36
+771.PING 192.168.0.105 (192.168.0.105) 56(84) bytes of data.
+64 bytes from 192.168.0.105: icmp_seq=1 ttl=64 time=0.400 ms
+
+--- 192.168.0.105 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.400/0.400/0.400/0.000 ms
+PING 192.168.0.1 (192.168.0.1) 56(84) bytes of data.
+64 bytes from 192.168.0.1: icmp_seq=1 ttl=64 time=0.426 ms
+
+--- 192.168.0.1 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.426/0.426/0.426/0.000 ms
+PING 192.168.0.88 (192.168.0.88) 56(84) bytes of data.
+64 bytes from 192.168.0.88: icmp_seq=1 ttl=64 time=1.22 ms
+
+--- 192.168.0.88 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 1.221/1.221/1.221/0.000 ms
+PING 192.168.0.112 (192.168.0.112) 56(84) bytes of data.
+
+--- 192.168.0.112 ping statistics ---
+1 packets transmitted, 0 received, 100% packet loss, time 0ms
+
+PING 192.168.0.77 (192.168.0.77) 56(84) bytes of data.
+64 bytes from 192.168.0.77: icmp_seq=1 ttl=64 time=1.09 ms
+
+--- 192.168.0.77 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 1.098/1.098/1.098/0.000 ms
+159.203.168.255 - - [30/Sep/2016 19:54:38] "GET //MyAdmin/scripts/setup.php HTTP/1.1" 200 1280
+PING 192.168.0.105 (192.168.0.105) 56(84) bytes of data.
+64 bytes from 192.168.0.105: icmp_seq=1 ttl=64 time=1.54 ms
+
+--- 192.168.0.105 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 1.549/1.549/1.549/0.000 ms
+PING 192.168.0.1 (192.168.0.1) 56(84) bytes of data.
+64 bytes from 192.168.0.1: icmp_seq=1 ttl=64 time=0.464 ms
+
+--- 192.168.0.1 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.464/0.464/0.464/0.000 ms
+PING 192.168.0.88 (192.168.0.88) 56(84) bytes of data.
+64 bytes from 192.168.0.88: icmp_seq=1 ttl=64 time=2.64 ms
+
+--- 192.168.0.88 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 2.649/2.649/2.649/0.000 ms
+PING 192.168.0.112 (192.168.0.112) 56(84) bytes of data.
+
+--- 192.168.0.112 ping statistics ---
+1 packets transmitted, 0 received, 100% packet loss, time 0ms
+
+PING 192.168.0.77 (192.168.0.77) 56(84) bytes of data.
+64 bytes from 192.168.0.77: icmp_seq=1 ttl=64 time=2.66 ms
+
+--- 192.168.0.77 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 2.661/2.661/2.661/0.000 ms
+115.239.228.8 - - [30/Sep/2016 20:40:34] "GET http://zc.qq.com/cgi-bin/common/attr?id=260714&r=0.0161016186434844 HTTP/1.1" 200 1280
+PING 192.168.0.105 (192.168.0.105) 56(84) bytes of data.
+64 bytes from 192.168.0.105: icmp_seq=1 ttl=64 time=1.92 ms
+
+--- 192.168.0.105 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 1.928/1.928/1.928/0.000 ms
+PING 192.168.0.1 (192.168.0.1) 56(84) bytes of data.
+64 bytes from 192.168.0.1: icmp_seq=1 ttl=64 time=0.515 ms
+
+--- 192.168.0.1 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.515/0.515/0.515/0.000 ms
+PING 192.168.0.88 (192.168.0.88) 56(84) bytes of data.
+64 bytes from 192.168.0.88: icmp_seq=1 ttl=64 time=2.29 ms
+
+--- 192.168.0.88 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 2.298/2.298/2.298/0.000 ms
+PING 192.168.0.112 (192.168.0.112) 56(84) bytes of data.
+
+--- 192.168.0.112 ping statistics ---
+1 packets transmitted, 0 received, 100% packet loss, time 0ms
+
+PING 192.168.0.77 (192.168.0.77) 56(84) bytes of data.
+64 bytes from 192.168.0.77: icmp_seq=1 ttl=64 time=3.26 ms
+
+--- 192.168.0.77 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 3.261/3.261/3.261/0.000 ms
+191.96.249.189 - - [30/Sep/2016 21:15:57] "GET /index.html HTTP/1.0" 200 1280
+PING 192.168.0.105 (192.168.0.105) 56(84) bytes of data.
+64 bytes from 192.168.0.105: icmp_seq=1 ttl=64 time=1.11 ms
+
+--- 192.168.0.105 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 1.116/1.116/1.116/0.000 ms
+PING 192.168.0.1 (192.168.0.1) 56(84) bytes of data.
+64 bytes from 192.168.0.1: icmp_seq=1 ttl=64 time=0.504 ms
+
+--- 192.168.0.1 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.504/0.504/0.504/0.000 ms
+PING 192.168.0.88 (192.168.0.88) 56(84) bytes of data.
+64 bytes from 192.168.0.88: icmp_seq=1 ttl=64 time=3.96 ms
+
+--- 192.168.0.88 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 3.960/3.960/3.960/0.000 ms
+PING 192.168.0.112 (192.168.0.112) 56(84) bytes of data.
+
+--- 192.168.0.112 ping statistics ---
+1 packets transmitted, 0 received, 100% packet loss, time 0ms
+
+PING 192.168.0.77 (192.168.0.77) 56(84) bytes of data.
+64 bytes from 192.168.0.77: icmp_seq=1 ttl=64 time=3.33 ms
+
+--- 192.168.0.77 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 3.333/3.333/3.333/0.000 ms
+92.255.232.87 - - [30/Sep/2016 22:58:40] "HEAD / HTTP/1.0" 200 1280
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 85, in run
+    self.result = application(self.environ, self.start_response)
+  File "webserver.py", line 90, in application
+    kWh, netuse, pwr = get_kWh()
+  File "webserver.py", line 68, in get_kWh
+    netuse = last_line[3]
+IndexError: list index out of range
+115.239.228.8 - - [01/Oct/2016 01:16:18] "GET http://zc.qq.com/cgi-bin/common/attr?id=260714&r=0.1760096890693082 HTTP/1.1" 500 59

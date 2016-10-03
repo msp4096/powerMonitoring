@@ -2,6 +2,7 @@
 # Script to read energy meter last reading
 # 2016-09-27
 import os.path
+import linecache
 import json
 import time
 import string
@@ -20,15 +21,13 @@ FMT = "%Y-%m-%d %H:%M:%S"
 
 ####### Read the first line to get starting point for the month...or make a first line for the month in the else statment
 
-if os.path.isfile(filename): #if the file exists it will do advanced calculations and add more info
+if os.path.isfile(filename): #if the file exists it will do advanced calculations and add more info to the log file, first of month is limited data
 
 	a = open(filename, "r")
-	first_line = a.readline().rstrip()
-
-	####### Read last line to calculate instaneous power
-	lines = a.readlines()
-	if lines:
-		last_line  = str(lines[-1]).rstrip()
+	first_line = linecache.getline(filename, 1)
+	num_lines = sum(1 for line in a) 
+	last_line=linecache.getline(filename, num_lines)
+	print last_line
 	a.close()
 
 	first_line = first_line.split(',')
@@ -36,13 +35,11 @@ if os.path.isfile(filename): #if the file exists it will do advanced calculation
 	first_line_meter = first_line[1]
 
 	last_line = last_line.split(',')
+	print last_line
 	last_line_time = last_line[0]  #date and time
+	print last_line_time
 	last_line_meter = last_line[1]
-
-	#print first_line_time  # don't really need this variable
-	#print first_line_meter
-	#print last_line_time
-	#print last_line_meter
+	print last_line_meter
 
 	current_time = datetime.now().strftime(FMT) #current time without microseconds
 
@@ -50,7 +47,6 @@ if os.path.isfile(filename): #if the file exists it will do advanced calculation
 	current = datetime.strptime(current_time, FMT)
 	tdelta = current - last
 	tdelta = tdelta.total_seconds()
-	#print tdelta
 
 	####### Open and file and add a new line
 	datafile = open(filename, "a", 1)
