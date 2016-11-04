@@ -4,10 +4,11 @@ def pingNet():
 
     devices = {
         'Router'      : {'IP': '192.168.0.1'   },
-        'DoomAlpha'   : {'IP': '192.168.0.105' },
-        "Nana's UBNT" : {'IP': '192.168.0.77'  },
+        'DoomAlpha'   : {'IP': '192.168.0.42' },
+        "Nana's UBNT" : {'IP': '192.168.0.43'  },
         'Cameras'     : {'IP': '192.168.0.88'  },
-        'HPprinter'   : {'IP': '192.168.0.112' }
+        'HPprinter'   : {'IP': '192.168.0.112' },
+	'Nana Pi'     : {'IP': '192.168.0.150' }
     }
 
     print 'original dict'

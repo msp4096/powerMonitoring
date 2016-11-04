@@ -118,7 +118,8 @@ def application(environ, start_response):
     print humidity
     print pressure_in
 
-    html1 = '<html><header><h1>Pi Monitoring System</h1><h2>Power Monitoring</h2><title>Pi in the Basement</title></header><body>'
+#    html1 = '<html><header><h1>Pi Monitoring System</h1><h2>Power Monitoring</h2><title>Pi in the Basement</title></header><body>'
+    html1 = '<html><header><title>Erics Pi</title></hearder><body><center><h1>Pi Monitoring System</h1><h2>Power Monitoring</h2>'
     html2 = '<table border="1"><tr><td><strong>Current Solar Power (W)</strong></td><td>'
     html3 = '</td></tr><tr><td><strong>Current Meter Reading (kWh)</strong></td><td>'
     htmlx = '</td></tr><tr><td><strong>Metered Net This Month (kWh)</strong></td><td>'
@@ -151,7 +152,7 @@ def application(environ, start_response):
 #   html15 = '<h2>Current picture</h2><img src="http://127.0.0.1:6600" alt="Pi Camera Picture">'
 #   html15 = '<h2>Current picture</h2><img src="image.jpg" alt="Pi Camera Picture">'
 #   html15 = '<h2>Current picture</h2><img src="/home/pi/projects/webServer/image.jpg" alt="Pi Camera Picture" style="width:304px;height:228px;">'
-    htmlclose = '</body></html>'
+    htmlclose = '</center></body></html>'
 
     table2 = html8 + html9 + table_rows + html14 + str(current_time)
 
