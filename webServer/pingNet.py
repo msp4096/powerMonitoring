@@ -4,7 +4,7 @@ def pingNet():
 
     devices = {
         'Router'      : {'IP': '192.168.0.1'   },
-        'DoomAlpha'   : {'IP': '192.168.0.42' },
+        'DoomAlpha'   : {'IP': '192.168.0.44' },
         "Nana's UBNT" : {'IP': '192.168.0.43'  },
         'Cameras'     : {'IP': '192.168.0.88'  },
         'HPprinter'   : {'IP': '192.168.0.112' },

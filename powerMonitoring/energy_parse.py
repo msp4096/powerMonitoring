@@ -54,12 +54,15 @@ if os.path.isfile(filename): #if the file exists it will do advanced calculation
 
 	####### Get the latest meter reading and turn into kWh
 	tfile = open ( path + 'reading')
+	print tfile
 	text = tfile.read()
 	tfile.close()
 	data = json.loads(text)
 	kWh = float(data['Message']['Consumption']) / 100
 
 	kWh_month_net = kWh - float(first_line_meter)
+	if kWh_month_net > 2000 or kWh_month_net < -2000:
+		kWh_month_net = kWh - float(first_line_meter) - 99999
 	print kWh_month_net
 	print kWh
 	current_power_net = ((float(kWh) - float(last_line_meter)) / tdelta) * 3600.0 * 1000 # Power in Watts
