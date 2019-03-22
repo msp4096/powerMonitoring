@@ -17,14 +17,18 @@ WUNDERGROUND_API_KEY = "c2ac867add89df72"
 STATE = "MA"
 CITY = "Topsfield"
 
+print('User settings imported')
+
 #Get time
 def get_current_time():
+        print('time...')
 	current_time = time.strftime('%H:%M:%S')
 	return current_time
 	
 
 #Get solar power data from the SolarEdge API
 def get_solar():
+        print('solar...')
 	api_solar_url = "https://monitoringapi.solaredge.com/sites/196000/overview.json?api_key=JRPXUFIKH0KMXBAO7NXQWYF7A6IYRT8G"
 	try:
 	  	f = urllib2.urlopen(api_solar_url)
@@ -37,6 +41,7 @@ def get_solar():
 
 #Get the current weather conditions
 def get_conditions():
+        print('weather...')
         api_conditions_url = "http://api.wunderground.com/api/" + WUNDERGROUND_API_KEY + "/conditions/q/" + STATE + "/" + CITY + ".json"
         try:
                 f = urllib2.urlopen(api_conditions_url)
@@ -49,7 +54,8 @@ def get_conditions():
 	
 #Get current information from the log file
 def get_kWh():
-    
+        print('kWh meter...')
+
 	path = '/home/pi/projects/powerMonitoring/logs/'
 	fileTS = time.strftime("%Y-%m")
 	tfile = path + 'energy_' + fileTS + '.log'
@@ -63,6 +69,7 @@ def get_kWh():
 		first_line = first_line.split(',')
 		last_line  = last_line.split(',')
 		print first_line
+
 		print last_line
 		kWh = last_line[1]
 		netuse = last_line[3]
@@ -76,6 +83,7 @@ def get_kWh():
 #start the server and get values when page is refreshed
 def application(environ, start_response):
 
+    print('application started')
     print environ['PATH_INFO']
 
     #solar stuff
@@ -109,14 +117,19 @@ def application(environ, start_response):
     pressure_in = 0.0295301*(pressure_mb)
     pressure_in = float("{0:.2f}".format(pressure_in))
     
-    outside_conditions = get_conditions()
-    outside_temp_f = outside_conditions['current_observation']['temp_f']
-    outside_humidity_pct = outside_conditions['current_observation']['relative_humidity']
-    print outside_temp_f
-    print outside_humidity_pct
-    print temp_f
-    print humidity
-    print pressure_in
+    # attempt to get weather values, print 'n/a' if unable
+    try:
+        outside_conditions = get_conditions()
+        outside_temp_f = outside_conditions['current_observation']['temp_f']
+        outside_humidity_pct = outside_conditions['current_observation']['relative_humidity']
+        print outside_temp_f
+        print outside_humidity_pct
+        print temp_f
+        print humidity
+        print pressure_in
+    except:
+        outside_temp_f = 'n/a'
+        outside_humidity_pct = 'n/a'
 
 #    html1 = '<html><header><h1>Pi Monitoring System</h1><h2>Power Monitoring</h2><title>Pi in the Basement</title></header><body>'
     html1 = '<html><header><title>Erics Pi</title></hearder><body><center><h1>Pi Monitoring System</h1><h2>Power Monitoring</h2>'
@@ -177,5 +190,8 @@ def application(environ, start_response):
 
 # Make it serve on all addresses
 # can be changed to e.g. 192.168.0.10 of you want to restric to local network
+
+print('making server')
 httpd = make_server('0.0.0.0', portNumber, application)
+print('staring server')
 httpd.serve_forever()
