@@ -25,9 +25,11 @@ if os.path.isfile(filename): #if the file exists it will do advanced calculation
 
 	a = open(filename, "r")
 	first_line = linecache.getline(filename, 1)
+        print (first_line) 
 	num_lines = sum(1 for line in a) 
-	last_line=linecache.getline(filename, num_lines)
-	print last_line
+	print(num_lines)
+	last_line=linecache.getline(filename, num_lines-1)  #subtracted one from the total lines to fix an error...
+	print (last_line + " this is the last line")
 	a.close()
 
 	first_line = first_line.split(',')
@@ -35,11 +37,11 @@ if os.path.isfile(filename): #if the file exists it will do advanced calculation
 	first_line_meter = first_line[1]
 
 	last_line = last_line.split(',')
-	print last_line
+	print (last_line)
 	last_line_time = last_line[0]  #date and time
-	print last_line_time
+	print (last_line_time)
 	last_line_meter = last_line[1]
-	print last_line_meter
+	print (last_line_meter)
 
 	current_time = datetime.now().strftime(FMT) #current time without microseconds
 
@@ -54,7 +56,7 @@ if os.path.isfile(filename): #if the file exists it will do advanced calculation
 
 	####### Get the latest meter reading and turn into kWh
 	tfile = open ( path + 'reading')
-	print tfile
+	print (tfile)
 	text = tfile.read()
 	tfile.close()
 	data = json.loads(text)
@@ -63,10 +65,10 @@ if os.path.isfile(filename): #if the file exists it will do advanced calculation
 	kWh_month_net = kWh - float(first_line_meter)
 	if kWh_month_net > 2000 or kWh_month_net < -2000:
 		kWh_month_net = kWh - float(first_line_meter) - 99999
-	print kWh_month_net
-	print kWh
+	print (kWh_month_net)
+	print (kWh)
 	current_power_net = ((float(kWh) - float(last_line_meter)) / tdelta) * 3600.0 * 1000 # Power in Watts
-	print current_power_net
+	print (current_power_net)
 
 	timestamp, _ = string.split(string.replace(data['Time'],'T',' '),'.')
 
