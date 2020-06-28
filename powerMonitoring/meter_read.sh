@@ -13,4 +13,3 @@ PID=$!
 
 python /home/pi/projects/powerMonitoring/energy_parse.py
 kill -9 $PID
-
