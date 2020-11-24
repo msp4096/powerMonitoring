@@ -1,0 +1,17 @@
+[Unit]
+# symbolic link to /etc/systemd/system/
+Description=Eric's Python Webserver
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+Group=root
+WorkingDirectory=/home/pi/projects/webServer/
+ExecStart=/usr/bin/python3 /home/pi/projects/webServer/webserver.py
+StandardOutput=syslog
+StandardError=syslog
+
+[Install]
+WantedBy=multi-user.target

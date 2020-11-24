@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 from wsgiref.simple_server import make_server
 import time
@@ -108,6 +108,7 @@ def application(environ, start_response):
 
     #meter stuff
     kWh, netuse, pwr = get_kWh()
+    netuse = round(float(netuse),2)
     print("meter now = " + str(kWh) + " kwh")
     print("usage = " + str(netuse) + " kwr")
     print(pwr)
@@ -134,36 +135,41 @@ def application(environ, start_response):
         outside_conditions = get_conditions()
         #outside_temp_f = outside_conditions['current_observation']['temp_f']
         #outside_humidity_pct = outside_conditions['current_observation']['relative_humidity']
-        outside_temp_f = outside_conditions['main']['temp']
+        outside_temp_k = outside_conditions['main']['temp']
         outside_humidity_pct = outside_conditions['main']['humidity']
+        outside_wind = outside_conditions['wind']['speed']
+        outside_temp_f = round((outside_temp_k-273.0) * 9.0 /5.0 +32.0, 2)
+        outside_wind = round(outside_wind * 2.23694,2)
         print(outside_temp_f)
         print(outside_humidity_pct)
         print(temp_f)
         print(humidity)
         print(pressure_in)
-    #except:
+    except Exception as e:
+        print(e)
         outside_temp_f = 'n/a'
         outside_humidity_pct = 'n/a'
 
 #   html1 = '<html><header><h1>Pi Monitoring System</h1><h2>Power Monitoring</h2><title>Pi in the Basement</title></header><body>'
-    htmla = "<html><header><title>Erics Pi</title></hearder><body><center><h1>Pi Monitoring System</h1><h2>Power Monitoring</h2>"
+    htmla = '<html><header><title>Erics Pi</title></hearder><body><center><h1>Pi Monitoring System</h1><h2>Power Monitoring</h2>'
     htmlb = '<table border="1"><tr><td><strong>Current Solar Power (W)</strong></td><td>'
     htmlc = '</td></tr><tr><td><strong>Current Meter Reading (kWh)</strong></td><td>'
     htmlx = '</td></tr><tr><td><strong>Metered Net This Month (kWh)</strong></td><td>'
-    htmly = '</td></tr><tr><td><strong>Current Power Consumption (W)</strong></td><td>' 
+    htmly = '</td></tr><tr><td><strong>Current Power Consumption (W)</strong></td><td>'
     #html4 = '</td></tr></table><h2>Environment</h2><table border="1"><tr><td></td></tr><tr><td><strong>Basement Temp (F)</strong></td><td>'
     htmld = '</td></tr></table><h2>Environment</h2><table border="1"><tr><td><strong>Basement Temp (F)</strong></td><td>'
     htmle = '</td></tr><tr><td><strong>Basement Humidity (%)</strong></td><td>'
     htmlf = '</td></tr><tr><td><strong>Basement Pressure (in)</strong></td><td>'
     htmlg = '</td></tr><tr><td><strong>Outside Temp (F)</strong></td><td>'
     htmlh = '</td></tr><tr><td><strong>Outside Humidity (%)</strong></td><td>'
+    htmlz = '</td></tr><tr><td><strong>Outside Wind (mph)</strong></td><td>'
     htmli = '</td></tr></table>'
 
-    table1 = htmla + htmlb + str(currentPower) + htmlx + str(netuse) + htmly + str(pwr) + htmlc + str(kWh) + htmld + str(temp_f) + htmle + str(humidity) + htmlf + str(pressure_in)+ htmla + str(outside_temp_f) + htmlb + str(outside_humidity_pct) + htmlg
+    table1 = htmla + htmlb + str(currentPower) + htmlx + str(netuse) + htmly + str(pwr) + htmlc + str(kWh) + htmld + str(temp_f) + htmle + str(humidity) + htmlf + str(pressure_in) + htmlg + str(outside_temp_f) + htmlh + str(outside_humidity_pct) + htmlz + str(outside_wind) + htmli
 
     htmlclose = '</body></html>'
+
     htmlj = '<h2>Network</h2>'
-    htmlk = '<table border="1">'
     table_rows = ''
 #   for (host, status) in Intra_pings.items():
 #   table_rows += "<tr><td><strong>{}</strong></td><td>{}</td></tr>".format(host, status)
@@ -173,18 +179,16 @@ def application(environ, start_response):
             table_rows += '<tr><td><strong>' + key + '</strong></td><td   bgcolor="#00FF00">' + Intra_pings[key]['Status'] + "</td></tr>"
         elif Intra_pings[key]['Status'] == 'down':
             table_rows += '<tr><td><strong>' + key + '</strong></td><td   bgcolor="#FF0000">' + Intra_pings[key]['Status'] + "</td></tr>"
-
     htmll = '</td></tr></table>'
-    #htmltime = '<h2>Time:</h2>'
+    htmlm = '<table border="1"><tr><td>'
+#   htmltime = '<h2>Time:</h2>'
 #   html15 = '<h2>Current picture</h2><img src="http://127.0.0.1:6600" alt="Pi Camera Picture">'
 #   html15 = '<h2>Current picture</h2><img src="image.jpg" alt="Pi Camera Picture">'
 #   html15 = '<h2>Current picture</h2><img src="/home/pi/projects/webServer/image.jpg" alt="Pi Camera Picture" style="width:304px;height:228px;">'
     htmlclose = '</center></body></html>'
 
-    table2 = htmll + htmlj + table_rows + htmlk + str(current_time)
+    table2 = htmlj + '<table border="1">' +  table_rows + htmll + str(current_time)
 
-    # response_body
-    #response_body = table1 + table2 + html15 + htmlclose
     response_body = table1 + table2 + htmlclose
     status = "200 OK"
 
@@ -192,16 +196,14 @@ def application(environ, start_response):
 
     response_headers = [('Content-type','text/html'), ('Content-Length', str(len(response_body)))]
 
-#    if '.jpg' in str(environ['PATH_INFO']):
-#	response_headers = [('Content-type', 'image/jpg'), ('Content-Length', str(len(response_body)))]
-
     print(response_headers)
 
     start_response(status, response_headers)
-    return [response_body]
+    return [response_body.encode()]
+
 
 # Make it serve on all addresses
-# can be changed to e.g. 192.168.0.10 of you want to restric to local network
+# can be changed to e.g. 192.168.0.10 of you want to restrict to local network
 
 print('making server')
 with make_server('0.0.0.0', portNumber, application) as httpd:
