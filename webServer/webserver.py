@@ -9,13 +9,11 @@ from sense_hat import SenseHat
 import pingNet
 import os
 import os.path
+import keys
 #import picamera
 
 # ------ User settings -------
 portNumber = 81
-WUNDERGROUND_API_KEY = "c2ac867add89df72"
-STATE = "MA"
-CITY = "Topsfield"
 
 print('User settings imported')
 
@@ -29,10 +27,8 @@ def get_current_time():
 #Get solar power data from the SolarEdge API
 def get_solar():
     print('solar...')
-    #api_solar_url = "https://monitoringapi.solaredge.com/sites/196000/overview.json?api_key=JRPXUFIKH0KMXBAO7NXQWYF7A6IYRT8G"
-    api_solar_url = "https://monitoringapi.solaredge.com/sites/196000/overview.json?api_key=G8F0RLY7LNBFPU3FEC1VG76BFISZAOYA"
     try:
-        with urllib2.urlopen(api_solar_url) as url:
+        with urllib2.urlopen(keys.api_solar_url) as url:
             f = json.loads(url.read().decode())
             print(f)
     except:
@@ -46,10 +42,8 @@ def get_solar():
 #Get the current weather conditions
 def get_conditions():
     print('weather...')
-    #api_conditions_url = "http://api.wunderground.com/api/" + WUNDERGROUND_API_KEY + "/conditions/q/" + STATE + "/" + CITY + ".json"
-    api_conditions_url = "http://api.openweathermap.org/data/2.5/weather?id=4930505&appid=6ab5a0a32767ee7008260b57269d8c34"
     try:
-        with urllib2.urlopen(api_conditions_url) as url:
+        with urllib2.urlopen(keys.api_conditions_url) as url:
             f = json.loads(url.read().decode())
     except:
         print("Failed to get conditions")
