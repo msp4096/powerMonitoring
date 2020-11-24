@@ -11,8 +11,8 @@ def pingNet():
 	'Nana Pi'     : {'IP': '192.168.0.150' }
     }
 
-    print 'original dict'
-    print devices
+    print('original dict')
+    print(devices)
 
     for key in devices:
 
@@ -21,8 +21,8 @@ def pingNet():
         else:
             devices[key]['Status'] = 'down'
 
-    print 'new dict'
-    print devices
+    print('new dict')
+    print(devices)
 
     return devices
 
