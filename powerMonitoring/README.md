@@ -1,4 +1,4 @@
-### Renda Solar Stuff
+### Solar Stuff
 Eric's solar thingy.
 
 ## Steps to install
