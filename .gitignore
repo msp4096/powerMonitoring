@@ -2,3 +2,5 @@ info.json
 meter_read.log
 reading
 keys.py
+/webServer/__pycache__
+
