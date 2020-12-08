@@ -28,16 +28,16 @@ def get_current_time():
 def get_solar():
     print('solar...')
     try:
-        with urllib2.urlopen(keys.api_solar_url) as url:
-            f = json.loads(url.read().decode())
-            print(f)
+        with urllib2.urlopen(keys.api_solar_url) as urla:
+            a = json.loads(urla.read().decode())
+            print(a)
+        with urllib2.urlopen(keys.api_solar_nana_url) as urlb:
+            b = json.loads(urlb.read().decode())
+            print(b)
     except:
         print("Failed to get solar")
         return False
-    #json_solar = f.read()
-    #f.close()
-    #return json.loads(json_solar)
-    return f
+    return (a,b)
 
 #Get the current weather conditions
 def get_conditions():
@@ -90,12 +90,19 @@ def application(environ, start_response):
     print(environ['PATH_INFO'])
 
     #solar stuff
-    solar = get_solar()
+    solara, solarb = get_solar()
     try:
-        currentPower = solar['sitesOverviews']['siteEnergyList'][0]['siteOverview']['currentPower']['power']
+        currentPowera = solara['sitesOverviews']['siteEnergyList'][0]['siteOverview']['currentPower']['power']
+        DayProductiona = solara['sitesOverviews']['siteEnergyList'][0]['siteOverview']['lastDayData']['energy']
+        MonthProductiona = solara['sitesOverviews']['siteEnergyList'][0]['siteOverview']['lastMonthData']['energy']
+        currentPowerb = solarb['sitesOverviews']['siteEnergyList'][0]['siteOverview']['currentPower']['power']
+        DayProductionb = solarb['sitesOverviews']['siteEnergyList'][0]['siteOverview']['lastDayData']['energy']
+        MonthProductionb = solarb['sitesOverviews']['siteEnergyList'][0]['siteOverview']['lastMonthData']['energy']
     except:
-        currentPower = 0
-    print("Current power = " + str(currentPower) + " Watts \n")
+        currentPowera = 0
+        currentPowerb = 0
+    print("Current power at 12 Tim = " + str(currentPowera) + " Watts \n")
+    print("Current power at 18 Tim = " + str(currentPowerb) + " Watts \n")
 
     #get time
     current_time = get_current_time()
@@ -106,7 +113,7 @@ def application(environ, start_response):
     print("meter now = " + str(kWh) + " kwh")
     print("usage = " + str(netuse) + " kwr")
     print(pwr)
-    pwr = float(pwr) + float(currentPower)
+    pwr = float(pwr) + float(currentPowera)
 
     #network stuff
     Intra_pings = pingNet.pingNet()
@@ -146,7 +153,8 @@ def application(environ, start_response):
 
 #   html1 = '<html><header><h1>Pi Monitoring System</h1><h2>Power Monitoring</h2><title>Pi in the Basement</title></header><body>'
     htmla = '<html><header><title>Erics Pi</title></hearder><body><center><h1>Pi Monitoring System</h1><h2>Power Monitoring</h2>'
-    htmlb = '<table border="1"><tr><td><strong>Current Solar Power (W)</strong></td><td>'
+    htmlb = '<table border="1"><tr><td><strong>Current Solar Power Dada (W)</strong></td><td>'
+    htmlbb= '</td></tr><tr><td><strong>Current Solar Nana (W)</strong></td><td>'
     htmlc = '</td></tr><tr><td><strong>Current Meter Reading (kWh)</strong></td><td>'
     htmlx = '</td></tr><tr><td><strong>Metered Net This Month (kWh)</strong></td><td>'
     htmly = '</td></tr><tr><td><strong>Current Power Consumption (W)</strong></td><td>'
@@ -159,7 +167,7 @@ def application(environ, start_response):
     htmlz = '</td></tr><tr><td><strong>Outside Wind (mph)</strong></td><td>'
     htmli = '</td></tr></table>'
 
-    table1 = htmla + htmlb + str(currentPower) + htmlx + str(netuse) + htmly + str(pwr) + htmlc + str(kWh) + htmld + str(temp_f) + htmle + str(humidity) + htmlf + str(pressure_in) + htmlg + str(outside_temp_f) + htmlh + str(outside_humidity_pct) + htmlz + str(outside_wind) + htmli
+    table1 = htmla + htmlb + str(currentPowera) + htmlbb + str(currentPowerb) + htmlx + str(netuse) + htmly + str(pwr) + htmlc + str(kWh) + htmld + str(temp_f) + htmle + str(humidity) + htmlf + str(pressure_in) + htmlg + str(outside_temp_f) + htmlh + str(outside_humidity_pct) + htmlz + str(outside_wind) + htmli
 
     htmlclose = '</body></html>'
 
