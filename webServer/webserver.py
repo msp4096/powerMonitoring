@@ -125,7 +125,7 @@ def application(environ, start_response):
     temp_c = sense.get_temperature()
     humidity = sense.get_humidity()
     pressure_mb = sense.get_pressure()
-    temp_f = temp_c * 9.0 / 5.0 + 32.0
+    temp_f = (temp_c * 9.0 / 5.0 + 32.0) - 31.78
     temp_f = float("{0:.2f}".format(temp_f))
     humidity = float("{0:.2f}".format(humidity)) + 20
     pressure_in = 0.0295301*(pressure_mb)
@@ -167,7 +167,7 @@ def application(environ, start_response):
     htmlz = '</td></tr><tr><td><strong>Outside Wind (mph)</strong></td><td>'
     htmli = '</td></tr></table>'
 
-    table1 = htmla + htmlb + str(currentPowera) + htmlbb + str(currentPowerb) + htmlx + str(netuse) + htmly + str(pwr) + htmlc + str(kWh) + htmld + str(temp_f) + htmle + str(humidity) + htmlf + str(pressure_in) + htmlg + str(outside_temp_f) + htmlh + str(outside_humidity_pct) + htmlz + str(outside_wind) + htmli
+    table1 = htmla + htmlb + str(round(currentPowera,2)) + htmlbb + str(round(currentPowerb,2)) + htmlx + str(round(netuse,2)) + htmly + str(round(pwr,2)) + htmlc + str(kWh) + htmld + str(temp_f) + htmle + str(humidity) + htmlf + str(pressure_in) + htmlg + str(outside_temp_f) + htmlh + str(outside_humidity_pct) + htmlz + str(outside_wind) + htmli
 
     htmlclose = '</body></html>'
 
