@@ -51,6 +51,7 @@ def get_conditions():
     outside_conditions = f
     temp_k = outside_conditions['main']['temp']
     wind_speed = outside_conditions['wind']['speed']
+    pressure_out = outside_conditions['main']['pressure']
     temp_F = round((temp_k-273.0) * 9.0 /5.0 +32.0, 2)
     print(temp_F)
     print(wind_speed)
@@ -138,6 +139,7 @@ def application(environ, start_response):
         #outside_humidity_pct = outside_conditions['current_observation']['relative_humidity']
         outside_temp_k = outside_conditions['main']['temp']
         outside_humidity_pct = outside_conditions['main']['humidity']
+        outside_pressure = round(0.0295301 * outside_conditions['main']['pressure'],2)
         outside_wind = outside_conditions['wind']['speed']
         outside_temp_f = round((outside_temp_k-273.0) * 9.0 /5.0 +32.0, 2)
         outside_wind = round(outside_wind * 2.23694,2)
@@ -164,10 +166,11 @@ def application(environ, start_response):
     htmlf = '</td></tr><tr><td><strong>Basement Pressure (in)</strong></td><td>'
     htmlg = '</td></tr><tr><td><strong>Outside Temp (F)</strong></td><td>'
     htmlh = '</td></tr><tr><td><strong>Outside Humidity (%)</strong></td><td>'
+    htmlq = '</td></tr><tr><td><strong>Outside Pressure (in)</strong></td><td>'
     htmlz = '</td></tr><tr><td><strong>Outside Wind (mph)</strong></td><td>'
     htmli = '</td></tr></table>'
 
-    table1 = htmla + htmlb + str(round(currentPowera,2)) + htmlbb + str(round(currentPowerb,2)) + htmlx + str(round(netuse,2)) + htmly + str(round(pwr,2)) + htmlc + str(kWh) + htmld + str(temp_f) + htmle + str(humidity) + htmlf + str(pressure_in) + htmlg + str(outside_temp_f) + htmlh + str(outside_humidity_pct) + htmlz + str(outside_wind) + htmli
+    table1 = htmla + htmlb + str(round(currentPowera,2)) + htmlbb + str(round(currentPowerb,2)) + htmlx + str(round(netuse,2)) + htmly + str(round(pwr,2)) + htmlc + str(kWh) + htmld + str(temp_f) + htmle + str(humidity) + htmlf + str(pressure_in) + htmlg + str(outside_temp_f) + htmlh + str(outside_humidity_pct) + htmlq + str(outside_pressure) + htmlz + str(outside_wind) + htmli
 
     htmlclose = '</body></html>'
 

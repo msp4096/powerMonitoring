@@ -26,4 +26,4 @@ try:
 	a = open(filename, "r")
 	first_line = a.readline().rstrip()
 except OSerror as err:
-	print "there is no fuckin file"
+	print "there is no file"
